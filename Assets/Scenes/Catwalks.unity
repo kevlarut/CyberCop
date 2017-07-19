@@ -282,7 +282,7 @@ GameObject:
   - component: {fileID: 911917442}
   - component: {fileID: 911917443}
   m_Layer: 0
-  m_Name: Character_0
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -356,7 +356,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1931716892}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -416,8 +417,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef5e03450245e04b89ae97c0108bc5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpFactor: 200
-  speedFactor: 2
+  jumpForce: 200
+  runningSpeed: 2
+  bulletForce: 2
+  bullet: {fileID: 1981350421319994, guid: dc0f4d223ef36c942b553530b35b64db, type: 2}
+  bulletSpawn: {fileID: 1931716892}
 --- !u!1001 &1552828855
 Prefab:
   m_ObjectHideFlags: 0
@@ -485,3 +489,31 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fccfa14612afe5646af4aa8c4571f27b, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1931716891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1931716892}
+  m_Layer: 0
+  m_Name: BulletSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1931716892
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1931716891}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.06, y: 0.14, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 911917440}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

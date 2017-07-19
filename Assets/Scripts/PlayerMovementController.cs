@@ -1,25 +1,30 @@
 ﻿using UnityEngine;
 
-public class PlayerMovementController : MonoBehaviour {
-
-    public float jumpFactor = 300;
-    public float speedFactor = 5.0f;
+public class PlayerMovementController : MonoBehaviour
+{
+    public float jumpForce = 150f;
+    public float runningSpeed = 2.0f;
+    public float bulletForce = 300f;
+    public GameObject bullet;
+    public Transform bulletSpawn;
 
     private bool grounded = true;
     private bool isFacingRight = true;
 
     private Animator animator;
     private Rigidbody2D rigidBody;
-    
-    void Start () {
+
+    void Start()
+    {
 
         animator = GetComponent<Animator>();
         rigidBody = GetComponent<Rigidbody2D>();
     }
-	
-	void Update () {
 
-        var walkingInput = Input.GetAxisRaw("Horizontal");        
+    void Update()
+    {
+
+        var walkingInput = Input.GetAxisRaw("Horizontal");
         var jumpingInput = Input.GetAxisRaw("Vertical");
 
         var isJumping = !grounded;
@@ -28,11 +33,11 @@ public class PlayerMovementController : MonoBehaviour {
         animator.SetBool("IsRunning", isRunning);
         animator.SetBool("IsJumping", isJumping);
 
-        rigidBody.velocity = new Vector2(walkingInput * speedFactor, rigidBody.velocity.y);
+        rigidBody.velocity = new Vector2(walkingInput * runningSpeed, rigidBody.velocity.y);
 
         if (jumpingInput > 0 && grounded)
         {
-            rigidBody.AddForce(Vector2.up * jumpFactor);
+            rigidBody.AddForce(Vector2.up * jumpForce);
             grounded = false;
         }
 
@@ -44,8 +49,17 @@ public class PlayerMovementController : MonoBehaviour {
         {
             FlipFacing();
         }
+
+        if (Input.GetButton("Fire1") || Input.GetKeyDown("space"))
+        {
+            animator.SetBool("IsShooting", true);
+
+            var bulletInstance = Instantiate(bullet, bulletSpawn.position, bulletSpawn.rotation);
+            var forceDirection = isFacingRight ? Vector2.right : Vector2.left;
+            var bulletRigidBody2d = bulletInstance.GetComponent<Rigidbody2D>();
+            bulletInstance.GetComponent<Rigidbody2D>().AddForce(forceDirection * bulletForce);
+        }
     }
-    
     void OnCollisionEnter2D(Collision2D coll)
     {
         grounded = true;
