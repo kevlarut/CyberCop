@@ -57,6 +57,12 @@ public class PlayerMovementController : MonoBehaviour
             var bulletInstance = Instantiate(bullet, bulletSpawn.position, bulletSpawn.rotation);
             var forceDirection = isFacingRight ? Vector2.right : Vector2.left;
             var bulletRigidBody2d = bulletInstance.GetComponent<Rigidbody2D>();
+
+            if (!isFacingRight)
+            {
+                bulletInstance.transform.localScale = new Vector2(-bulletInstance.transform.localScale.x, bulletInstance.transform.localScale.y);
+            }
+
             bulletInstance.GetComponent<Rigidbody2D>().AddForce(forceDirection * bulletForce);
         }
     }
