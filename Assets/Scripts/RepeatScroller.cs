@@ -7,7 +7,7 @@ namespace Assets.Scripts.Scene
         public float Length;
         public float Speed;
 
-        private Vector2 startPosition;
+        private Vector3 startPosition;
 
         void Start()
         {
@@ -17,7 +17,7 @@ namespace Assets.Scripts.Scene
         void Update()
         {
             float newPosition = Mathf.Repeat(Time.time * Speed, Length);
-            transform.position = startPosition + Vector2.left * newPosition;
+            transform.position = startPosition + Vector3.left * newPosition;
         }        
     }
 }

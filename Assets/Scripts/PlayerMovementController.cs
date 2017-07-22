@@ -65,6 +65,8 @@ public class PlayerMovementController : MonoBehaviour
 
             bulletInstance.GetComponent<Rigidbody2D>().AddForce(forceDirection * bulletForce);
         }
+
+        RespawnIfPlayerHasFallenToHisDoom();
     }
     void OnCollisionEnter2D(Collision2D coll)
     {
@@ -75,5 +77,12 @@ public class PlayerMovementController : MonoBehaviour
     {
         isFacingRight = !isFacingRight;
         transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
+    }
+
+    void RespawnIfPlayerHasFallenToHisDoom() {
+        if (transform.position.y < -3) {
+            transform.position = new Vector3(0, 1, 0);
+            rigidBody.velocity = new Vector3(0, 0, 0);
+        }
     }
 }

@@ -53,6 +53,8 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\CyberDeathBall.cs" />
      <Compile Include="Assets\Scripts\FadeIn.cs" />
+     <Compile Include="Assets\Scripts\FollowCamera.cs" />
+     <Compile Include="Assets\Scripts\FollowRepeatScroller.cs" />
      <Compile Include="Assets\Scripts\PlayerMovementController.cs" />
      <Compile Include="Assets\Scripts\RepeatScroller.cs" />
  <Reference Include="UnityEngine.UI">
