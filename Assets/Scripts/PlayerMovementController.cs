@@ -68,6 +68,7 @@ public class PlayerMovementController : MonoBehaviour
 
         RespawnIfPlayerHasFallenToHisDoom();
     }
+    
     void OnCollisionEnter2D(Collision2D coll)
     {
         grounded = true;

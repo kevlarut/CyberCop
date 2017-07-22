@@ -5,6 +5,7 @@ public class CyberDeathBall : MonoBehaviour
     public float hoverForce = 1f;
     public float devianceTolerance = 0.25f;
     public float maximumVelocity = 1f;
+    public GameObject Explosion;
 
     private Animator animator;
     private Rigidbody2D rigidBody;
@@ -24,5 +25,9 @@ public class CyberDeathBall : MonoBehaviour
         {
             rigidBody.AddForce(Vector2.up * hoverForce);
         }
+    }
+
+    void OnDestroy() {
+        var explosionInstance = Instantiate(Explosion, rigidBody.transform.position, Quaternion.identity);	
     }
 }
