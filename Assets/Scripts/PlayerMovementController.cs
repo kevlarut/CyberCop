@@ -62,6 +62,10 @@ public class PlayerMovementController : MonoBehaviour
         grounded = true;
     }
 
+    public bool GetIsFacingRight() {
+        return isFacingRight;
+    }
+
     void FlipFacing()
     {
         isFacingRight = !isFacingRight;

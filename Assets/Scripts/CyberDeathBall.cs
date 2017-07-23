@@ -2,9 +2,6 @@
 
 public class CyberDeathBall : MonoBehaviour
 {
-    public float hoverAmplitude = 1f;
-    public float hoverSpeed = 10f;
-    public float hoverForce = 10f;
     public float horizontalForce = 10f;
     public GameObject explosion;
     public Gun gun;
@@ -15,42 +12,42 @@ public class CyberDeathBall : MonoBehaviour
     
     private Animator _animator;
     private Rigidbody2D _rigidBody;
-    private float _originalY;
     private bool _isFacingRight = false;
 
     void Start()
     {
         _animator = GetComponent<Animator>();
         _rigidBody = GetComponent<Rigidbody2D>();
-        _originalY = _rigidBody.transform.position.y;
     }
 
-    void Update()
-    {
-        var desiredY = _originalY + hoverAmplitude * Mathf.Sin(hoverSpeed * Time.time);
-        var verticalSpaceToMakeUp = desiredY - _rigidBody.transform.position.y;
-        if (verticalSpaceToMakeUp > 0)
-        {
-            _rigidBody.AddForce(Vector2.up * verticalSpaceToMakeUp * hoverForce);
-        }
-        
-        if (player.position.x > transform.position.x && !_isFacingRight) {
-            FlipFacing();
-        }
-        else if (player.position.x < transform.position.x && _isFacingRight) {
-            FlipFacing();
+    void FixedUpdate()
+    {        
+        if (player != null) {
+            if (player.position.x > transform.position.x && !_isFacingRight) {
+                FlipFacing();
+            }
+            else if (player.position.x < transform.position.x && _isFacingRight) {
+                FlipFacing();
+            }
+            
+            var destinationX = 0f;
+            if (_isFacingRight) {
+                destinationX = player.position.x - desiredDistanceFromPlayer;
+            }
+            else {
+                destinationX = player.position.x + desiredDistanceFromPlayer;
+            }
+            var desiredYRelativeToPlayer = 0.25f;
+            var destination = new Vector3(destinationX, player.position.y + desiredYRelativeToPlayer, player.position.z);
+
+            _rigidBody.AddForce((destination - transform.position).normalized * horizontalForce * Time.smoothDeltaTime);
         }
 
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q) && GetComponent<Renderer>().isVisible)
         {
             if (gun.Shoot(_isFacingRight)) {                
                 _animator.SetBool("IsShooting", true);
             }
-        }
-
-        var distance = Vector3.Distance(transform.position, player.position);
-        if (distance < distanceWithinWhichToFollowThePlayer && distance > desiredDistanceFromPlayer) {
-            _rigidBody.AddForce((player.transform.position - transform.position).normalized * horizontalForce * Time.smoothDeltaTime);
         }
     }
 

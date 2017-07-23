@@ -14,7 +14,7 @@ public class Bullet : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D col)
     {
 		var target = col.gameObject;
-     	if(target.tag == TargetTag)
+     	if(target.GetComponent<Renderer>().isVisible && target.tag == TargetTag)
      	{
 			target.GetComponent<Destructible>().OnDamageTaken();
 			Destroy(gameObject);
