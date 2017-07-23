@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\AnimationAutoDestroy.cs" />
      <Compile Include="Assets\Scripts\Bullet.cs" />
      <Compile Include="Assets\Scripts\CyberDeathBall.cs" />
+     <Compile Include="Assets\Scripts\Destructible.cs" />
      <Compile Include="Assets\Scripts\FadeIn.cs" />
      <Compile Include="Assets\Scripts\FollowCamera.cs" />
      <Compile Include="Assets\Scripts\FollowRepeatScroller.cs" />

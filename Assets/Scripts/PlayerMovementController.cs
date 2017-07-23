@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovementController : MonoBehaviour
 {
@@ -46,7 +47,7 @@ public class PlayerMovementController : MonoBehaviour
             FlipFacing();
         }
 
-        if (Input.GetButton("Fire1") || Input.GetKeyDown("space"))
+        if (Input.GetButton("Fire1") || Input.GetKeyDown(KeyCode.Space))
         {
             if (Gun.Shoot(isFacingRight)) {                
                 animator.SetBool("IsShooting", true);
@@ -72,5 +73,10 @@ public class PlayerMovementController : MonoBehaviour
             transform.position = new Vector3(0, 1, 0);
             rigidBody.velocity = new Vector3(0, 0, 0);
         }
+    }
+
+    void OnDestroy() {
+        Scene scene = SceneManager.GetActiveScene(); 
+        SceneManager.LoadScene(scene.name);
     }
 }

@@ -3,11 +3,9 @@
 public class CyberDeathBall : MonoBehaviour
 {
     public float hoverForce = 1f;
-    public float devianceTolerance = 0.25f;
-    public float maximumVelocity = 1f;
     public float MaxHitPoints = 3f;
     public GameObject Explosion;
-    public GameObject Ping;
+    public Gun Gun;
 
     private Animator _animator;
     private Rigidbody2D _rigidBody;
@@ -23,22 +21,18 @@ public class CyberDeathBall : MonoBehaviour
 
     void Update()
     {
-        if (_rigidBody.transform.position.y < _originalY - devianceTolerance && _rigidBody.velocity.magnitude < maximumVelocity)
+        var verticalSpaceToMakeUp = _originalY - _rigidBody.transform.position.y;
+        if (verticalSpaceToMakeUp > 0)
         {
-            _rigidBody.AddForce(Vector2.up * hoverForce);
+            _rigidBody.AddForce(Vector2.up * hoverForce * verticalSpaceToMakeUp);
         }
-    }
-
-    public void OnDamageTaken() {
-        _damageTaken++;        
-        if (_damageTaken >= MaxHitPoints) {
-       		Destroy(gameObject);
-        }
-        else {
-            var pingInstance = Instantiate(Ping, _rigidBody.transform.position, Quaternion.identity);	
-            pingInstance.transform.parent = gameObject.transform;
-            var bulletForce = 10f;
-            _rigidBody.AddForce(Vector2.right * bulletForce);
+        
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            var isFacingRight = false;
+            if (Gun.Shoot(isFacingRight)) {                
+                _animator.SetBool("IsShooting", true);
+            }
         }
     }
 
