@@ -5,29 +5,44 @@ public class CyberDeathBall : MonoBehaviour
     public float hoverForce = 1f;
     public float devianceTolerance = 0.25f;
     public float maximumVelocity = 1f;
+    public float MaxHitPoints = 3f;
     public GameObject Explosion;
+    public GameObject Ping;
 
-    private Animator animator;
-    private Rigidbody2D rigidBody;
-
-    private float originalY;
+    private Animator _animator;
+    private Rigidbody2D _rigidBody;
+    private float _damageTaken;
+    private float _originalY;
 
     void Start()
     {
-        animator = GetComponent<Animator>();
-        rigidBody = GetComponent<Rigidbody2D>();
-        originalY = rigidBody.transform.position.y;
+        _animator = GetComponent<Animator>();
+        _rigidBody = GetComponent<Rigidbody2D>();
+        _originalY = _rigidBody.transform.position.y;
     }
 
     void Update()
     {
-        if (rigidBody.transform.position.y < originalY - devianceTolerance && rigidBody.velocity.magnitude < maximumVelocity)
+        if (_rigidBody.transform.position.y < _originalY - devianceTolerance && _rigidBody.velocity.magnitude < maximumVelocity)
         {
-            rigidBody.AddForce(Vector2.up * hoverForce);
+            _rigidBody.AddForce(Vector2.up * hoverForce);
+        }
+    }
+
+    public void OnDamageTaken() {
+        _damageTaken++;        
+        if (_damageTaken >= MaxHitPoints) {
+       		Destroy(gameObject);
+        }
+        else {
+            var pingInstance = Instantiate(Ping, _rigidBody.transform.position, Quaternion.identity);	
+            pingInstance.transform.parent = gameObject.transform;
+            var bulletForce = 10f;
+            _rigidBody.AddForce(Vector2.right * bulletForce);
         }
     }
 
     void OnDestroy() {
-        var explosionInstance = Instantiate(Explosion, rigidBody.transform.position, Quaternion.identity);	
+        var explosionInstance = Instantiate(Explosion, _rigidBody.transform.position, Quaternion.identity);	
     }
 }

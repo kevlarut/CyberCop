@@ -841,7 +841,6 @@ GameObject:
   - component: {fileID: 1504379837}
   - component: {fileID: 1504379836}
   - component: {fileID: 1504379842}
-  - component: {fileID: 1504379841}
   m_Layer: 0
   m_Name: CyberDeathBall
   m_TagString: Enemy
@@ -960,27 +959,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1504379835}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.619, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0.4, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1504379841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1504379835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a601ca3bf9e335e4bb7a56c29fc7192d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hoverForce: 0.25
-  devianceTolerance: 0.25
-  maximumVelocity: 1
-  Explosion: {fileID: 1046083001867438, guid: 83a749f31e181d749aa91dcc357d0001, type: 2}
 --- !u!114 &1504379842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -995,7 +979,9 @@ MonoBehaviour:
   hoverForce: 50
   devianceTolerance: 0.25
   maximumVelocity: 1
+  MaxHitPoints: 3
   Explosion: {fileID: 1046083001867438, guid: 83a749f31e181d749aa91dcc357d0001, type: 2}
+  Ping: {fileID: 1448462780922752, guid: 3dee1b25f5bfb154b9c4f1e4a48d303e, type: 2}
 --- !u!1001 &1552828855
 Prefab:
   m_ObjectHideFlags: 0

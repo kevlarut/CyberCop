@@ -7,8 +7,8 @@ public class Bullet : MonoBehaviour {
     {
 		var target = col.gameObject;
      	if(target.tag == "Enemy")
-     	{		
-       		Destroy(target);
+     	{
+			 target.GetComponent<CyberDeathBall>().OnDamageTaken();
 			Destroy(gameObject);
      	}
 	}
