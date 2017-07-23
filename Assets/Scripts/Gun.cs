@@ -23,7 +23,6 @@ public class Gun : MonoBehaviour {
 
 			var bulletInstance = Instantiate(bullet, bulletSpawn.position, bulletSpawn.rotation);
 			var forceDirection = isFacingRight ? Vector2.right : Vector2.left;
-			var bulletRigidBody2d = bulletInstance.GetComponent<Rigidbody2D>();
 
 			if (!isFacingRight)
 			{
