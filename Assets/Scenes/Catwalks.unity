@@ -326,7 +326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dampTime: 0.25
-  Target: {fileID: 911917440}
+  target: {fileID: 911917440}
 --- !u!1 &571568278
 GameObject:
   m_ObjectHideFlags: 0
@@ -856,6 +856,7 @@ GameObject:
   - component: {fileID: 1504379836}
   - component: {fileID: 1504379842}
   - component: {fileID: 1504379841}
+  - component: {fileID: 1504379843}
   m_Layer: 0
   m_Name: CyberDeathBall
   m_TagString: Enemy
@@ -899,10 +900,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1005,10 +1006,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a601ca3bf9e335e4bb7a56c29fc7192d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverForce: 50
-  MaxHitPoints: 3
-  Explosion: {fileID: 1046083001867438, guid: 83a749f31e181d749aa91dcc357d0001, type: 2}
-  Gun: {fileID: 1913151591}
+  horizontalForce: 10
+  explosion: {fileID: 1046083001867438, guid: 83a749f31e181d749aa91dcc357d0001, type: 2}
+  gun: {fileID: 1913151591}
+  player: {fileID: 911917440}
+  distanceWithinWhichToFollowThePlayer: 10
+  desiredDistanceFromPlayer: 0.5
+--- !u!114 &1504379843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1504379835}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23cf4d284b9154c4a8d14f0bbce92592, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitude: 0.1
+  hoverSpeed: 2
 --- !u!1001 &1552828855
 Prefab:
   m_ObjectHideFlags: 0
