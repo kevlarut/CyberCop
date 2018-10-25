@@ -80,7 +80,8 @@ public class PlayerMovementController : MonoBehaviour
     }
 
     void OnDestroy() {
-        Scene scene = SceneManager.GetActiveScene(); 
-        SceneManager.LoadScene(scene.name);
+        //TODO: This causes problems with the editor because then I can never close the scene.  Is there a better way to respawn?
+        //Scene scene = SceneManager.GetActiveScene(); 
+        //SceneManager.LoadScene(scene.name);
     }
 }
