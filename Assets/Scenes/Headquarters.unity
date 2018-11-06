@@ -378,8 +378,8 @@ MonoBehaviour:
   persistentDataName: 
   portrait: {fileID: 0}
   barkUISettings:
-    barkUI: {fileID: 11453294, guid: d5a18ab9ec93e0d4284d6fbae4f557e0, type: 2}
-    barkUIOffset: {x: 0, y: 0, z: 0}
+    barkUI: {fileID: 114266469536920282, guid: 455cce3add20944eca0bd2a11755fc0d, type: 2}
+    barkUIOffset: {x: 0, y: -1.5, z: 0}
   standardDialogueUISettings:
     subtitlePanelNumber: 0
     customSubtitlePanel: {fileID: 0}
@@ -419,7 +419,9 @@ MonoBehaviour:
   conversation: Police Chief Barks
   condition:
     luaConditions: []
-    questConditions: []
+    questConditions:
+    - questName: Investigate Murder at Docks
+      questState: 1
     acceptedTags: []
     acceptedGameObjects: []
     luaWizardIndex: -1
@@ -432,8 +434,8 @@ MonoBehaviour:
   barkOrder: 0
   allowDuringConversations: 0
   cacheBarkLines: 0
-  minSeconds: 1
-  maxSeconds: 2
+  minSeconds: 4
+  maxSeconds: 8
   target: {fileID: 940092313}
 --- !u!1 &418001506
 GameObject:
