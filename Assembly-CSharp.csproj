@@ -63,6 +63,7 @@
      <Compile Include="Assets\Scripts\FollowRepeatScroller.cs" />
      <Compile Include="Assets\Scripts\Gun.cs" />
      <Compile Include="Assets\Scripts\Hover.cs" />
+     <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\NPC.cs" />
      <Compile Include="Assets\Scripts\Pacer.cs" />
      <Compile Include="Assets\Scripts\PlayerMovementController.cs" />
