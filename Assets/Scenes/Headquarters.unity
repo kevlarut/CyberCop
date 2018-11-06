@@ -173,6 +173,7 @@ GameObject:
   - component: {fileID: 221689125}
   - component: {fileID: 221689121}
   - component: {fileID: 221689126}
+  - component: {fileID: 221689127}
   m_Layer: 0
   m_Name: Police Chief
   m_TagString: Untagged
@@ -377,8 +378,8 @@ MonoBehaviour:
   persistentDataName: 
   portrait: {fileID: 0}
   barkUISettings:
-    barkUI: {fileID: 0}
-    barkUIOffset: {x: 0, y: 2, z: 0}
+    barkUI: {fileID: 11453294, guid: d5a18ab9ec93e0d4284d6fbae4f557e0, type: 2}
+    barkUIOffset: {x: 0, y: 0, z: 0}
   standardDialogueUISettings:
     subtitlePanelNumber: 0
     customSubtitlePanel: {fileID: 0}
@@ -403,6 +404,37 @@ MonoBehaviour:
   overrideName: 
   overrideUseMessage: 
   maxUseDistance: 5
+--- !u!114 &221689127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 221689118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 505dcd4c4aa3a1741ab98b9ad39eb7a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  once: 0
+  conversation: Police Chief Barks
+  condition:
+    luaConditions: []
+    questConditions: []
+    acceptedTags: []
+    acceptedGameObjects: []
+    luaWizardIndex: -1
+    lastEvaluationValue: 0
+  skipIfNoValidEntries: 0
+  exclusive: 0
+  conversant: {fileID: 221689124}
+  useConversationTitlePicker: 1
+  selectedDatabase: {fileID: 0}
+  barkOrder: 0
+  allowDuringConversations: 0
+  cacheBarkLines: 0
+  minSeconds: 1
+  maxSeconds: 2
+  target: {fileID: 940092313}
 --- !u!1 &418001506
 GameObject:
   m_ObjectHideFlags: 0
@@ -1612,6 +1644,11 @@ Prefab:
       propertyPath: initialDatabase
       value: 
       objectReference: {fileID: 11400000, guid: 63c3b6eef4d5c486ba7289c0e593dc80,
+        type: 2}
+    - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 2}
+      propertyPath: displaySettings.dialogueUI
+      value: 
+      objectReference: {fileID: 1227369013336768, guid: fedc5ec42d5a447d9aab943e5ae48ed4,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58ac37417e60e534f91138088a3e6f70, type: 2}
