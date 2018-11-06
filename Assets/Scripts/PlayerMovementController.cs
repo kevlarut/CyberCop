@@ -9,6 +9,7 @@ public class PlayerMovementController : MonoBehaviour
 
     private bool grounded = true;
     private bool isFacingRight = true;
+    private bool isTalking = false;
 
     private Animator animator;
     private Rigidbody2D rigidBody;
@@ -21,6 +22,10 @@ public class PlayerMovementController : MonoBehaviour
 
     void Update()
     {
+        if (isTalking) {
+            return;
+        }
+
         var walkingInput = Input.GetAxisRaw("Horizontal");
         var jumpingInput = Input.GetAxisRaw("Vertical");
 
@@ -83,5 +88,20 @@ public class PlayerMovementController : MonoBehaviour
         //TODO: This causes problems with the editor because then I can never close the scene.  Is there a better way to respawn?
         //Scene scene = SceneManager.GetActiveScene(); 
         //SceneManager.LoadScene(scene.name);
+    }
+
+    void OnConversationEnd() {
+        isTalking = false;
+    }
+
+    void OnConversationStart() {
+        isTalking = true;
+        rigidBody.velocity = new Vector2(0, 0);
+        animator.SetBool("IsRunning", false);
+        animator.SetBool("IsJumping", false);
+    }
+
+    void StopTalking() {
+        isTalking = false;
     }
 }
