@@ -10,8 +10,6 @@
     {
         if (target)
         {
-            var camera = GetComponent<Camera>();
-
             var targetVector = target.position;
 
             if (!isFacingRight && target.position.x > transform.position.x) {
