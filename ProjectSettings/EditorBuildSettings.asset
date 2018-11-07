@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Headquarters.unity
     guid: e1edc02a7fa2b644dbe642628ebf28b5
   - enabled: 1
+    path: Assets/Scenes/Docks.unity
+    guid: 4a185d87c36260b4694868a519be39f2
+  - enabled: 1
     path: Assets/Scenes/Catwalks.unity
     guid: 692bec53df9f09e49b0a29cbe4f4b821
   m_configObjects: {}
