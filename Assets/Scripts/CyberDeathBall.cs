@@ -3,7 +3,6 @@
 public class CyberDeathBall : MonoBehaviour
 {
     public float horizontalForce = 10f;
-    public GameObject explosion;
     public Gun gun;
     public Transform player;
      
@@ -49,10 +48,6 @@ public class CyberDeathBall : MonoBehaviour
                 _animator.SetBool("IsShooting", true);
             }
         }
-    }
-
-    void OnDestroy() {
-        Instantiate(explosion, _rigidBody.transform.position, Quaternion.identity);
     }
     
     void FlipFacing()

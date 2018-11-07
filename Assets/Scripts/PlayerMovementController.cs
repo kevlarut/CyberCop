@@ -79,15 +79,9 @@ public class PlayerMovementController : MonoBehaviour
 
     void RespawnIfPlayerHasFallenToHisDoom() {
         if (transform.position.y < -3) {
-            transform.position = new Vector3(0, 1, 0);
-            rigidBody.velocity = new Vector3(0, 0, 0);
+            Scene scene = SceneManager.GetActiveScene(); 
+            SceneManager.LoadScene(scene.name);
         }
-    }
-
-    void OnDestroy() {
-        //TODO: This causes problems with the editor because then I can never close the scene.  Is there a better way to respawn?
-        //Scene scene = SceneManager.GetActiveScene(); 
-        //SceneManager.LoadScene(scene.name);
     }
 
     void OnConversationEnd() {

@@ -6,6 +6,7 @@ public class Destructible : MonoBehaviour {
 
     public float MaxHitPoints = 3f;
     public GameObject Ping;
+    public GameObject Explosion;
 	
     private float _damageTaken;
     private Rigidbody2D _rigidBody;
@@ -20,6 +21,7 @@ public class Destructible : MonoBehaviour {
     public void OnDamageTaken() {
         _damageTaken++;        
         if (_damageTaken >= MaxHitPoints) {
+            Instantiate(Explosion, _rigidBody.transform.position, Quaternion.identity);
        		Destroy(gameObject);
         }
         else {
