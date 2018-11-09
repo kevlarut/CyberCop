@@ -79,9 +79,13 @@ public class PlayerMovementController : MonoBehaviour
 
     void RespawnIfPlayerHasFallenToHisDoom() {
         if (transform.position.y < -3) {
-            Scene scene = SceneManager.GetActiveScene(); 
-            SceneManager.LoadScene(scene.name);
+            OnDeath();
         }
+    }
+
+    public void OnDeath() {
+        Scene scene = SceneManager.GetActiveScene(); 
+        SceneManager.LoadScene(scene.name);
     }
 
     void OnConversationEnd() {

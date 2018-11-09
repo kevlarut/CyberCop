@@ -22,7 +22,14 @@ public class Destructible : MonoBehaviour {
         _damageTaken++;        
         if (_damageTaken >= MaxHitPoints) {
             Instantiate(Explosion, _rigidBody.transform.position, Quaternion.identity);
-       		Destroy(gameObject);
+
+            var playerMovementController = GetComponent<PlayerMovementController>();
+            if (playerMovementController != null) {
+                playerMovementController.OnDeath();
+            }
+            else {
+       		    Destroy(gameObject);
+            }
         }
         else {
             var pingInstance = Instantiate(Ping, _rigidBody.transform.position, Quaternion.identity);	

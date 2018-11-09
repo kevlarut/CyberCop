@@ -8,6 +8,7 @@ public class Gun : MonoBehaviour {
     public float bulletForce = 5f;
     public GameObject bullet;
     public Transform bulletSpawn;
+	public string TargetTag = "Enemy";
 
 	private float coolDownTimeStamp;
 
@@ -22,6 +23,7 @@ public class Gun : MonoBehaviour {
 			coolDownTimeStamp = Time.time + CoolDownPeriodInSeconds;
 
 			var bulletInstance = Instantiate(bullet, bulletSpawn.position, bulletSpawn.rotation);
+			bulletInstance.GetComponent<Bullet>().TargetTag = TargetTag;
 			var forceDirection = isFacingRight ? Vector2.right : Vector2.left;
 
 			if (!isFacingRight)
