@@ -7,6 +7,7 @@ public class Punk : MonoBehaviour
      
     public float desiredMinimumDistanceFromPlayer = 1.0f;
     public float desiredMaximumDistanceFromPlayer = 3.0f;
+    public float MinimumShootingDistance = 3.0f;
     public float runningSpeed = 2.0f;
 
     private Animator animator;
@@ -32,8 +33,10 @@ public class Punk : MonoBehaviour
             else {
                 FaceTowardsTarget();
                 animator.SetBool("IsRunning", false);
-                if (gun.Shoot(isFacingRight)) {                
-                    animator.SetBool("IsShooting", true);
+                if (Mathf.Abs(distanceFromPlayer) <= MinimumShootingDistance) {
+                    if (gun.Shoot(isFacingRight)) {                
+                        animator.SetBool("IsShooting", true);
+                    }
                 }
             }
         }

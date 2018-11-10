@@ -358,7 +358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Length: 18
   Speed: 1
-  Direction: 1
+  Direction: 0
 --- !u!1001 &355083204
 Prefab:
   m_ObjectHideFlags: 0
@@ -733,6 +733,26 @@ Prefab:
       propertyPath: target
       value: 
       objectReference: {fileID: 355083205}
+    - target: {fileID: 114719338021091170, guid: 67a75afd43e57a34dbdb4848dc820b88,
+        type: 2}
+      propertyPath: desiredMinimumDistanceFromPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114719338021091170, guid: 67a75afd43e57a34dbdb4848dc820b88,
+        type: 2}
+      propertyPath: desiredMaximumDistanceFromPlayer
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114719338021091170, guid: 67a75afd43e57a34dbdb4848dc820b88,
+        type: 2}
+      propertyPath: MinimumShootingDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114719338021091170, guid: 67a75afd43e57a34dbdb4848dc820b88,
+        type: 2}
+      propertyPath: runningSpeed
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67a75afd43e57a34dbdb4848dc820b88, type: 2}
   m_IsPrefabAsset: 0
