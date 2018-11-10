@@ -334,7 +334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da09821b54d08bd47b98af827be83924, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHitPoints: 3
+  MaxHitPoints: 10
   Ping: {fileID: 1448462780922752, guid: 3dee1b25f5bfb154b9c4f1e4a48d303e, type: 2}
   Explosion: {fileID: 0}
 --- !u!114 &114611044935440798
@@ -350,8 +350,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CoolDownPeriodInSeconds: 0.2
   bulletForce: 5
+  Torque: 0
   bullet: {fileID: 1981350421319994, guid: dc0f4d223ef36c942b553530b35b64db, type: 2}
   bulletSpawn: {fileID: 4548144668760056}
+  TargetTag: Enemy
 --- !u!212 &212246692988626938
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -590,7 +590,7 @@ Prefab:
       objectReference: {fileID: 355083205}
     - target: {fileID: 1040557610241804, guid: af868a5ca69f1444bb5e5a49a3eeeaff, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af868a5ca69f1444bb5e5a49a3eeeaff, type: 2}
@@ -814,7 +814,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CoolDownPeriodInSeconds: 1
-  bulletForce: 5
+  bulletForce: 1
+  Torque: 1000
   bullet: {fileID: 1287446233600172, guid: 8299d5e29b11d77459ab263cdc7b1e4b, type: 2}
   bulletSpawn: {fileID: 1993200142}
   TargetTag: Player
