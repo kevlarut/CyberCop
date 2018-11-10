@@ -54,7 +54,7 @@ public class PlayerMovementController : MonoBehaviour
 
         if (Input.GetButton("Fire1") || Input.GetKeyDown(KeyCode.Space))
         {
-            if (Gun.Shoot(isFacingRight)) {                
+            if (Gun.CanShoot() && Gun.Shoot(isFacingRight)) {                
                 animator.SetBool("IsShooting", true);
             }
         }

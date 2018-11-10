@@ -13,34 +13,25 @@ public class Gun : MonoBehaviour {
 
 	private float coolDownTimeStamp;
 
-	void Start () {	
-	}
-	
-	void Update () {
+	public bool CanShoot() {
+		return coolDownTimeStamp <= Time.time;
 	}
 
 	public bool Shoot(bool isFacingRight) {
-		if (coolDownTimeStamp <= Time.time) {
-			coolDownTimeStamp = Time.time + CoolDownPeriodInSeconds;
+		coolDownTimeStamp = Time.time + CoolDownPeriodInSeconds;
 
-			var bulletInstance = Instantiate(bullet, bulletSpawn.position, bulletSpawn.rotation);
-			bulletInstance.GetComponent<Bullet>().TargetTag = TargetTag;
-			var forceDirection = isFacingRight ? Vector2.right : Vector2.left;
+		var bulletInstance = Instantiate(bullet, bulletSpawn.position, bulletSpawn.rotation);
+		bulletInstance.GetComponent<Bullet>().TargetTag = TargetTag;
+		var forceDirection = isFacingRight ? Vector2.right : Vector2.left;
 
-			if (!isFacingRight)
-			{
-				bulletInstance.transform.localScale = new Vector2(-bulletInstance.transform.localScale.x, bulletInstance.transform.localScale.y);
-			}
-
-			var rigidBody = bulletInstance.GetComponent<Rigidbody2D>();
-			rigidBody.AddForce(forceDirection * bulletForce);
-			//if (Torque > 0f) {
-        		rigidBody.AddTorque(Torque);
-			//}
-			return true;
+		if (!isFacingRight)
+		{
+			bulletInstance.transform.localScale = new Vector2(-bulletInstance.transform.localScale.x, bulletInstance.transform.localScale.y);
 		}
-		else {
-			return false;
-		}
+
+		var rigidBody = bulletInstance.GetComponent<Rigidbody2D>();
+		rigidBody.AddForce(forceDirection * bulletForce);
+		rigidBody.AddTorque(Torque);
+		return true;
 	}
 }

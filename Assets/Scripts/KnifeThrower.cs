@@ -1,14 +1,11 @@
 using UnityEngine;
 
-public class Punk : MonoBehaviour
+public class KnifeThrower : MonoBehaviour
 {
     public Gun gun;
     public Transform target;
      
-    public float desiredMinimumDistanceFromPlayer = 1.0f;
-    public float desiredMaximumDistanceFromPlayer = 3.0f;
     public float MinimumShootingDistance = 3.0f;
-    public float runningSpeed = 2.0f;
 
     private Animator animator;
     private Rigidbody2D rigidBody;
@@ -23,23 +20,18 @@ public class Punk : MonoBehaviour
     void FixedUpdate()
     {        
         if (target != null) {            
-            var distanceFromPlayer = target.transform.position.x - transform.position.x;
-            if (Mathf.Abs(distanceFromPlayer) > desiredMaximumDistanceFromPlayer) {  
-                FaceTowardsTarget();
-                float step = runningSpeed * Time.deltaTime;
-                transform.position = Vector2.MoveTowards(transform.position, target.position, step);
-                animator.SetBool("IsRunning", true);
-            }
-            else {
-                FaceTowardsTarget();
-                animator.SetBool("IsRunning", false);
-                if (Mathf.Abs(distanceFromPlayer) <= MinimumShootingDistance) {
-                    if (gun.CanShoot() && gun.Shoot(isFacingRight)) {                
-                        animator.SetBool("IsShooting", true);
-                    }
+            var distanceFromPlayer = target.transform.position.x - transform.position.x;            
+            FaceTowardsTarget();
+            if (Mathf.Abs(distanceFromPlayer) <= MinimumShootingDistance) {
+                if (gun.CanShoot()) {                
+                    animator.SetBool("IsShooting", true);
                 }
             }
         }
+    }
+
+    public void Shoot() {
+        gun.Shoot(isFacingRight);
     }
     
     void FaceAwayFromTarget() {
