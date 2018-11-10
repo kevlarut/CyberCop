@@ -18,10 +18,12 @@ public class Destructible : MonoBehaviour {
 	void Update () {		
 	}
 
-    public void OnDamageTaken() {
-        _damageTaken++;        
+    public void OnDamageTaken(float damage, bool shouldExplodeOnDeath = true) {
+        _damageTaken += damage;        
         if (_damageTaken >= MaxHitPoints) {
-            Instantiate(Explosion, _rigidBody.transform.position, Quaternion.identity);
+            if (shouldExplodeOnDeath) {
+                Instantiate(Explosion, _rigidBody.transform.position, Quaternion.identity);
+            }
 
             var playerMovementController = GetComponent<PlayerMovementController>();
             if (playerMovementController != null) {

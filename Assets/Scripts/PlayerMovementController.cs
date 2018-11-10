@@ -29,7 +29,7 @@ public class PlayerMovementController : MonoBehaviour
         var walkingInput = Input.GetAxisRaw("Horizontal");
         var jumpingInput = Input.GetAxisRaw("Vertical");
 
-        var isJumping = !grounded;
+        var isJumping = !grounded && rigidBody.velocity.y > 0.1f;
         var isRunning = !isJumping && walkingInput != 0;
 
         animator.SetBool("IsRunning", isRunning);
@@ -58,13 +58,14 @@ public class PlayerMovementController : MonoBehaviour
                 animator.SetBool("IsShooting", true);
             }
         }
-
-        RespawnIfPlayerHasFallenToHisDoom();
     }
 
-    void OnCollisionEnter2D(Collision2D coll)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        grounded = true;
+        if (collision.gameObject.tag != "Enemy") 
+        {
+            grounded = true;
+        }
     }
 
     public bool GetIsFacingRight() {
@@ -76,13 +77,6 @@ public class PlayerMovementController : MonoBehaviour
         isFacingRight = !isFacingRight;
         transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
     }
-
-    void RespawnIfPlayerHasFallenToHisDoom() {
-        if (transform.position.y < -3) {
-            OnDeath();
-        }
-    }
-
     public void OnDeath() {
         Scene scene = SceneManager.GetActiveScene(); 
         SceneManager.LoadScene(scene.name);

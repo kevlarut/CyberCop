@@ -16,7 +16,7 @@ public class Bullet : MonoBehaviour {
 		var target = col.gameObject;
      	if(target.GetComponent<Renderer>().isVisible && target.tag == TargetTag)
      	{
-			target.GetComponent<Destructible>().OnDamageTaken();
+			target.GetComponent<Destructible>().OnDamageTaken(1f);
 			Destroy(gameObject);
      	}
 	}
