@@ -5,6 +5,7 @@ public class CyberDeathBall : MonoBehaviour
     public float horizontalForce = 10f;
     public Gun gun;
     public Transform player;
+    public float listeningRange = 2f;
      
     public float distanceWithinWhichToFollowThePlayer = 10.0f;
     public float desiredDistanceFromPlayer = 0.5f;
@@ -21,7 +22,7 @@ public class CyberDeathBall : MonoBehaviour
 
     void FixedUpdate()
     {        
-        if (player != null) {
+        if (player != null && IsPlayerWithinSightRange()) {
             if (player.position.x > transform.position.x && !_isFacingRight) {
                 FlipFacing();
             }
@@ -37,7 +38,8 @@ public class CyberDeathBall : MonoBehaviour
                 destinationX = player.position.x + desiredDistanceFromPlayer;
             }
             var desiredYRelativeToPlayer = 0.25f;
-            var destination = new Vector3(destinationX, player.position.y + desiredYRelativeToPlayer, player.position.z);
+            var y = player.position.y + desiredYRelativeToPlayer;
+            var destination = new Vector3(destinationX, y, player.position.z);
 
             _rigidBody.AddForce((destination - transform.position).normalized * horizontalForce * Time.smoothDeltaTime);
         }
@@ -50,6 +52,10 @@ public class CyberDeathBall : MonoBehaviour
         }
     }
     
+    bool IsPlayerWithinSightRange() {
+        return Vector2.Distance(transform.position, player.transform.position) <= listeningRange;
+    }
+
     void FlipFacing()
     {
         _isFacingRight = !_isFacingRight;

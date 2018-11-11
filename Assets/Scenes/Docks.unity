@@ -404,6 +404,11 @@ Prefab:
       value: 
       objectReference: {fileID: 1046083001867438, guid: 83a749f31e181d749aa91dcc357d0001,
         type: 2}
+    - target: {fileID: 212246692988626938, guid: 78b2c5b76ff22704a87b32a5cfd891c2,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78b2c5b76ff22704a87b32a5cfd891c2, type: 2}
   m_IsPrefabAsset: 0
@@ -541,6 +546,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 50958978725416930, guid: 0d7c1d57c93ec2e45b6161f862848206,
+        type: 2}
+      propertyPath: m_GravityScale
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 114268860884502638, guid: 0d7c1d57c93ec2e45b6161f862848206,
+        type: 2}
+      propertyPath: horizontalForce
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 114268860884502638, guid: 0d7c1d57c93ec2e45b6161f862848206,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 355083205}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d7c1d57c93ec2e45b6161f862848206, type: 2}
   m_IsPrefabAsset: 0
@@ -831,6 +851,21 @@ Prefab:
     - target: {fileID: 4058295009174828, guid: 9d2dc0503882bbf41b4ad563a17d1474, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 108777103855428310, guid: 9d2dc0503882bbf41b4ad563a17d1474,
+        type: 2}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108777103855428310, guid: 9d2dc0503882bbf41b4ad563a17d1474,
+        type: 2}
+      propertyPath: m_DrawHalo
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108893425133375882, guid: 9d2dc0503882bbf41b4ad563a17d1474,
+        type: 2}
+      propertyPath: m_DrawHalo
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d2dc0503882bbf41b4ad563a17d1474, type: 2}
