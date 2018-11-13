@@ -37,10 +37,8 @@ GameObject:
   - component: {fileID: 4521973309336268}
   - component: {fileID: 212457118532301380}
   - component: {fileID: 95075158378398614}
-  - component: {fileID: 114863748343556988}
-  - component: {fileID: 114659377413190898}
-  - component: {fileID: 50166946349784712}
-  - component: {fileID: 61970566060672874}
+  - component: {fileID: 114666574843831278}
+  - component: {fileID: 114231296162461886}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Enemy
@@ -73,6 +71,10 @@ GameObject:
   - component: {fileID: 4427846491486108}
   - component: {fileID: 114058908209438754}
   - component: {fileID: 114541395897170914}
+  - component: {fileID: 50741550741486964}
+  - component: {fileID: 61223838173316024}
+  - component: {fileID: 114158264279757478}
+  - component: {fileID: 114169872813660528}
   m_Layer: 0
   m_Name: Knife-Thrower
   m_TagString: Enemy
@@ -135,13 +137,13 @@ Transform:
   m_Father: {fileID: 4386384040723756}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50166946349784712
+--- !u!50 &50741550741486964
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1634452950125188}
+  m_GameObject: {fileID: 1973754433829646}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -155,12 +157,12 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &61970566060672874
+--- !u!61 &61223838173316024
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1634452950125188}
+  m_GameObject: {fileID: 1973754433829646}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -225,6 +227,47 @@ MonoBehaviour:
     applyColorToPrependedName: 0
     prependActorNameSeparator: ': '
     subtitleColor: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &114158264279757478
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1973754433829646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da09821b54d08bd47b98af827be83924, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHitPoints: 3
+  Ping: {fileID: 1448462780922752, guid: 3dee1b25f5bfb154b9c4f1e4a48d303e, type: 2}
+  Explosion: {fileID: 1046083001867438, guid: 83a749f31e181d749aa91dcc357d0001, type: 2}
+--- !u!114 &114169872813660528
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1973754433829646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50dec776da8f48840b7dd37daaa08c58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gun: {fileID: 114757649598858862}
+  target: {fileID: 0}
+  MinimumShootingDistance: 3
+--- !u!114 &114231296162461886
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1634452950125188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 136480ba44f90734aa07de65e5e4007d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gun: {fileID: 114757649598858862}
+  target: {fileID: 0}
 --- !u!114 &114541395897170914
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -256,7 +299,7 @@ MonoBehaviour:
   minSeconds: 5
   maxSeconds: 10
   target: {fileID: 0}
---- !u!114 &114659377413190898
+--- !u!114 &114666574843831278
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -264,12 +307,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1634452950125188}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50dec776da8f48840b7dd37daaa08c58, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d961112a36b14243bfeb9afd9c8bb56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gun: {fileID: 114757649598858862}
   target: {fileID: 0}
-  MinimumShootingDistance: 3
 --- !u!114 &114757649598858862
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -287,20 +328,6 @@ MonoBehaviour:
   bullet: {fileID: 1287446233600172, guid: 8299d5e29b11d77459ab263cdc7b1e4b, type: 2}
   bulletSpawn: {fileID: 4722779733739256}
   TargetTag: Player
---- !u!114 &114863748343556988
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1634452950125188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da09821b54d08bd47b98af827be83924, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaxHitPoints: 3
-  Ping: {fileID: 1448462780922752, guid: 3dee1b25f5bfb154b9c4f1e4a48d303e, type: 2}
-  Explosion: {fileID: 1046083001867438, guid: 83a749f31e181d749aa91dcc357d0001, type: 2}
 --- !u!212 &212457118532301380
 SpriteRenderer:
   m_ObjectHideFlags: 1
