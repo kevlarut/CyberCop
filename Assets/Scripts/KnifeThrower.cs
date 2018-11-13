@@ -9,52 +9,22 @@ public class KnifeThrower : MonoBehaviour
 
     private Animator animator;
     private Rigidbody2D rigidBody;
-    private bool isFacingRight = true;
 
     void Start()
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
         rigidBody = GetComponent<Rigidbody2D>();
     }
 
     void FixedUpdate()
     {        
         if (target != null) {            
-            var distanceFromPlayer = target.transform.position.x - transform.position.x;            
-            FaceTowardsTarget();
+            var distanceFromPlayer = target.transform.position.x - transform.position.x;
             if (Mathf.Abs(distanceFromPlayer) <= MinimumShootingDistance) {
-                if (gun.CanShoot()) {                
+                if (gun.CanShoot()) {                                    
                     animator.SetBool("IsShooting", true);
                 }
             }
         }
-    }
-
-    public void Shoot() {
-        gun.Shoot(isFacingRight);
-    }
-    
-    void FaceAwayFromTarget() {
-        if (target.position.x > transform.position.x && isFacingRight) {
-            FlipFacing();
-        }
-        else if (target.position.x < transform.position.x && !isFacingRight) {
-            FlipFacing();
-        }
-    }
-
-    void FaceTowardsTarget() {
-        if (target.position.x > transform.position.x && !isFacingRight) {
-            FlipFacing();
-        }
-        else if (target.position.x < transform.position.x && isFacingRight) {
-            FlipFacing();
-        }
-    }
-
-    void FlipFacing()
-    {
-        isFacingRight = !isFacingRight;
-        transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
     }
 }
