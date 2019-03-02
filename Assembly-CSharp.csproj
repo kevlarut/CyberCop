@@ -80,6 +80,7 @@
      <Compile Include="Assets\Scripts\Spawner.cs" />
      <Compile Include="Assets\Scripts\Splash.cs" />
      <Compile Include="Assets\Scripts\StartScreen.cs" />
+     <Compile Include="Assets\Scripts\StreetThug.cs" />
      <Compile Include="Assets\Scripts\Water.cs" />
      <Compile Include="Assets\Scripts\WaterTexture.cs" />
      <None Include="Assets\Shaders\WaterGrab.shader" />

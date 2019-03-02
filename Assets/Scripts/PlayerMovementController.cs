@@ -52,11 +52,16 @@ public class PlayerMovementController : MonoBehaviour
             FlipFacing();
         }
 
-        if (Input.GetButton("Fire1") || Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetButton("Fire1"))
         {
             if (Gun.CanShoot() && Gun.Shoot(isFacingRight)) {                
                 animator.SetBool("IsShooting", true);
             }
+        }
+
+        if (Input.GetButton("Fire2"))
+        {             
+            animator.SetBool("IsPunching", true);
         }
     }
 
