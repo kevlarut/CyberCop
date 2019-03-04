@@ -3,10 +3,12 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovementController : MonoBehaviour
 {
+    public float PunchCoolDownTimeInSeconds = 1f;
     public float jumpForce = 150f;
     public float runningSpeed = 2.0f;
     public Gun Gun;
 
+    private float punchCoolDownTimeStamp;
     private bool grounded = true;
     private bool isFacingRight = true;
     private bool isTalking = false;
@@ -61,7 +63,9 @@ public class PlayerMovementController : MonoBehaviour
 
         if (Input.GetButton("Fire2"))
         {             
-            animator.SetBool("IsPunching", true);
+            if (CanPunch()) {
+                PunchTarget();
+            }
         }
     }
 
@@ -100,5 +104,17 @@ public class PlayerMovementController : MonoBehaviour
 
     void StopTalking() {
         isTalking = false;
+    }
+
+    
+	public bool CanPunch() {
+		return punchCoolDownTimeStamp <= Time.time;
+	}
+
+    void PunchTarget() {
+        if (CanPunch()) {
+		    punchCoolDownTimeStamp = Time.time + PunchCoolDownTimeInSeconds;
+            animator.SetTrigger("IsPunching");
+        }
     }
 }

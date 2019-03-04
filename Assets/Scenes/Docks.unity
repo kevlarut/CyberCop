@@ -484,6 +484,11 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 212246692988626938, guid: 78b2c5b76ff22704a87b32a5cfd891c2,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78b2c5b76ff22704a87b32a5cfd891c2, type: 2}
   m_IsPrefabAsset: 0
@@ -546,7 +551,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 0.64}
+    oldSize: {x: 1.28, y: 0.72}
     newSize: {x: 1.28, y: 0.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -672,7 +677,7 @@ MonoBehaviour:
   desiredMinimumDistanceFromPlayer: 0
   desiredMaximumDistanceFromPlayer: 0.3
   MinimumPunchingDistance: 0.3
-  runningSpeed: 2
+  runningSpeed: 1
 --- !u!1 &402459638
 GameObject:
   m_ObjectHideFlags: 0
