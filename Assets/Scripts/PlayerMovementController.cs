@@ -14,12 +14,14 @@ public class PlayerMovementController : MonoBehaviour
     private bool isTalking = false;
 
     private Animator animator;
+    private SpriteRenderer SpriteRenderer;
     private Rigidbody2D rigidBody;
 
     void Start()
     {
         animator = GetComponent<Animator>();
         rigidBody = GetComponent<Rigidbody2D>();
+        SpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -66,6 +68,15 @@ public class PlayerMovementController : MonoBehaviour
             if (CanPunch()) {
                 PunchTarget();
             }
+        }
+        
+        var stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        if (stateInfo.IsName("Punching"))
+        {
+            SpriteRenderer.sortingOrder = 3;
+        }
+        else {
+            SpriteRenderer.sortingOrder = 1;
         }
     }
 

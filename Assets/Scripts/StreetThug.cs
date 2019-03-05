@@ -14,15 +14,26 @@ public class StreetThug : MonoBehaviour
 	private float punchCoolDownTimeStamp;
     private Rigidbody2D rigidBody;
     private bool isFacingRight = true;
+    private SpriteRenderer SpriteRenderer;
 
     void Start()
     {
         animator = GetComponent<Animator>();
         rigidBody = GetComponent<Rigidbody2D>();
+        SpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void FixedUpdate()
-    {        
+    {
+        var stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        if (stateInfo.IsName("DoublePunch") || stateInfo.IsName("Uppercut"))
+        {
+            SpriteRenderer.sortingOrder = 2;
+        }
+        else {
+            SpriteRenderer.sortingOrder = 0;            
+        }
+
         if (target != null) {            
             var distanceFromPlayer = target.transform.position.x - transform.position.x;
             if (Mathf.Abs(distanceFromPlayer) > desiredMaximumDistanceFromPlayer) {  
