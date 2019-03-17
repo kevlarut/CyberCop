@@ -53,6 +53,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\BlackGardenStudios\HitboxStudioPro\Editor\Help\Scripts\PublisherWelcomeScreen.cs" />
+     <Compile Include="Assets\BlackGardenStudios\HitboxStudioPro\Editor\Scripts\CharacterEditorWindow.cs" />
+     <Compile Include="Assets\BlackGardenStudios\HitboxStudioPro\Editor\Scripts\EditorHandle.cs" />
+     <Compile Include="Assets\BlackGardenStudios\HitboxStudioPro\Editor\Scripts\EditorMenuItem.cs" />
+     <Compile Include="Assets\BlackGardenStudios\HitboxStudioPro\Editor\Scripts\HitboxCollisionMatrixEditor.cs" />
+     <Compile Include="Assets\BlackGardenStudios\HitboxStudioPro\Editor\Scripts\HitBoxManagerInspector.cs" />
+     <Compile Include="Assets\BlackGardenStudios\HitboxStudioPro\Editor\Scripts\SettingsEditorWindow.cs" />
+     <Compile Include="Assets\BlackGardenStudios\HitboxStudioPro\Editor\Scripts\SpriteIndexer.cs" />
+     <Compile Include="Assets\BlackGardenStudios\HitboxStudioPro\Editor\Scripts\SpritePaletteInspector.cs" />
      <Compile Include="Assets\KevinOwens\Plugins\Pixel Crushers\Common\Wrappers\Editor\Text\StringAssetMenu.cs" />
      <Compile Include="Assets\KevinOwens\Plugins\Pixel Crushers\Common\Wrappers\Editor\Text\TextTableAssetMenu.cs" />
      <Compile Include="Assets\KevinOwens\Plugins\Pixel Crushers\Dialogue System\Templates\Scripts\Editor\ConverterWindowTemplate.cs" />
@@ -305,6 +314,18 @@
  <Reference Include="UnityEditor.WindowsStandalone.Extensions">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.7f1/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
+ <Reference Include="PixelCrushers">
+ <HintPath>C:/Dev/CyberCop/Assets/KevinOwens/Plugins/Pixel Crushers/Common/DLLs/PixelCrushers.dll</HintPath>
+ </Reference>
+ <Reference Include="PixelCrushersEditor">
+ <HintPath>C:/Dev/CyberCop/Assets/KevinOwens/Plugins/Pixel Crushers/Common/DLLs/Editor/PixelCrushersEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="DialogueSystem">
+ <HintPath>C:/Dev/CyberCop/Assets/KevinOwens/Plugins/Pixel Crushers/Dialogue System/DLLs/DialogueSystem.dll</HintPath>
+ </Reference>
+ <Reference Include="DialogueSystemEditor">
+ <HintPath>C:/Dev/CyberCop/Assets/KevinOwens/Plugins/Pixel Crushers/Dialogue System/DLLs/Editor/DialogueSystemEditor.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>C:/Dev/CyberCop/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
@@ -319,18 +340,6 @@
  </Reference>
  <Reference Include="UnityEditor.Purchasing">
  <HintPath>C:/Dev/CyberCop/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
- </Reference>
- <Reference Include="DialogueSystem">
- <HintPath>C:/Dev/CyberCop/Assets/KevinOwens/Plugins/Pixel Crushers/Dialogue System/DLLs/DialogueSystem.dll</HintPath>
- </Reference>
- <Reference Include="PixelCrushersEditor">
- <HintPath>C:/Dev/CyberCop/Assets/KevinOwens/Plugins/Pixel Crushers/Common/DLLs/Editor/PixelCrushersEditor.dll</HintPath>
- </Reference>
- <Reference Include="DialogueSystemEditor">
- <HintPath>C:/Dev/CyberCop/Assets/KevinOwens/Plugins/Pixel Crushers/Dialogue System/DLLs/Editor/DialogueSystemEditor.dll</HintPath>
- </Reference>
- <Reference Include="PixelCrushers">
- <HintPath>C:/Dev/CyberCop/Assets/KevinOwens/Plugins/Pixel Crushers/Common/DLLs/PixelCrushers.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/2.0-api/mscorlib.dll</HintPath>

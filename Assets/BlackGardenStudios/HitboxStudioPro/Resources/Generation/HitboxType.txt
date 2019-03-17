@@ -1,0 +1,26 @@
+using System;
+using UnityEngine;
+
+namespace BlackGardenStudios.HitboxStudioPro
+{
+    [Serializable]
+    public enum HitboxType
+    {
+[ENTRIES]
+    }
+
+    public class HitboxSettings
+    {
+        static public readonly int MAX_HITBOXES = [MAX_HITBOXES];
+
+        static public Color COLOR(HitboxType type)
+        {
+            switch(type)
+            {
+[COLOR_SWITCH]
+            }
+
+            return Color.black;
+        }
+    }
+}

@@ -53,6 +53,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\BlackGardenStudios\HitboxStudioPro\Scripts\Data\ContactData.cs" />
+     <Compile Include="Assets\BlackGardenStudios\HitboxStudioPro\Scripts\Data\FrameEvent.cs" />
+     <Compile Include="Assets\BlackGardenStudios\HitboxStudioPro\Scripts\Data\HitboxType.cs" />
+     <Compile Include="Assets\BlackGardenStudios\HitboxStudioPro\Scripts\Data\RectInt.cs" />
+     <Compile Include="Assets\BlackGardenStudios\HitboxStudioPro\Scripts\Data\Vector2Int.cs" />
+     <Compile Include="Assets\BlackGardenStudios\HitboxStudioPro\Scripts\EffectSpawner.cs" />
+     <Compile Include="Assets\BlackGardenStudios\HitboxStudioPro\Scripts\HitboxFeeder.cs" />
+     <Compile Include="Assets\BlackGardenStudios\HitboxStudioPro\Scripts\HitboxManager.cs" />
+     <Compile Include="Assets\BlackGardenStudios\HitboxStudioPro\Scripts\ICharacter.cs" />
+     <Compile Include="Assets\BlackGardenStudios\HitboxStudioPro\Scripts\ListExtensions.cs" />
+     <Compile Include="Assets\BlackGardenStudios\HitboxStudioPro\Scripts\ResetHitboxTargets.cs" />
+     <Compile Include="Assets\BlackGardenStudios\HitboxStudioPro\Scripts\ScriptableObjects\AttackFX.cs" />
+     <Compile Include="Assets\BlackGardenStudios\HitboxStudioPro\Scripts\ScriptableObjects\HitboxCollisionMatrix.cs" />
+     <Compile Include="Assets\BlackGardenStudios\HitboxStudioPro\Scripts\ScriptableObjects\SpritePalette.cs" />
+     <Compile Include="Assets\BlackGardenStudios\HitboxStudioPro\Scripts\ScriptableObjects\SpritePaletteGroup.cs" />
      <Compile Include="Assets\KevinOwens\Plugins\Pixel Crushers\Common\Templates\SaverTemplate.cs" />
      <Compile Include="Assets\KevinOwens\Plugins\Pixel Crushers\Common\Wrappers\Message System Wrappers\DataSynchronizer.cs" />
      <Compile Include="Assets\KevinOwens\Plugins\Pixel Crushers\Common\Wrappers\Message System Wrappers\MessageEvents.cs" />
@@ -282,6 +297,7 @@
      <None Include="Assets\KevinOwens\Plugins\UnitySpriteShaders\SpriteShaders\CGIncludes\Noise\ClassicNoise3D.hlsl" />
      <None Include="Assets\KevinOwens\Plugins\UnitySpriteShaders\SpriteShaders\CGIncludes\Noise\Noise3d.cginc" />
      <None Include="Assets\KevinOwens\Plugins\Pixel Crushers\Dialogue System\Demo\Art\Sounds\_README.txt" />
+     <None Include="Assets\BlackGardenStudios\HitboxStudioPro\Resources\Generation\HitboxType.txt" />
      <None Include="Assets\KevinOwens\Plugins\UnitySpriteShaders\SpriteShaders\CameraDepthNormalsTexture.shader" />
      <None Include="Assets\KevinOwens\Plugins\Pixel Crushers\Dialogue System\Prefabs\Deprecated\Legacy Unity GUI Prefabs\Circle\Textures\_README.txt" />
      <None Include="Assets\KevinOwens\Plugins\Pixel Crushers\Dialogue System\Prefabs\Deprecated\Legacy Unity GUI Prefabs\Necromancer\_README.txt" />
@@ -300,6 +316,7 @@
      <None Include="Assets\KevinOwens\Plugins\Pixel Crushers\Common\_README.txt" />
      <None Include="Assets\KevinOwens\Plugins\Pixel Crushers\Dialogue System\Templates\Link\link_asmdef.xml" />
      <None Include="Assets\KevinOwens\Plugins\Pixel Crushers\Dialogue System\Prefabs\Deprecated\Legacy Unity GUI Prefabs\_README.txt" />
+     <None Include="Assets\BlackGardenStudios\HitboxStudioPro\Resources\Generation\FrameEvent.txt" />
      <None Include="Assets\KevinOwens\Plugins\Pixel Crushers\Dialogue System\Templates\Link\link.xml" />
      <None Include="Assets\KevinOwens\Plugins\UnitySpriteShaders\SpriteShaders\CGIncludes\ShaderMaths.cginc" />
      <None Include="Assets\KevinOwens\Plugins\UnitySpriteShaders\SpriteShaders\CGIncludes\SpriteLighting.cginc" />
@@ -321,6 +338,7 @@
      <None Include="Assets\KevinOwens\Plugins\Pixel Crushers\Dialogue System\Prefabs\Art\Textures\UnityUI\_README.txt" />
      <None Include="Assets\KevinOwens\Plugins\Pixel Crushers\Dialogue System\Wrappers\Deprecated Wrappers\_README.txt" />
      <None Include="Assets\KevinOwens\Plugins\UnitySpriteShaders\SpriteShaders\CGIncludes\SpriteVertexLighting.cginc" />
+     <None Include="Assets\BlackGardenStudios\HitboxStudioPro\Resources\Shaders\Sprites-Palette.shader" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Dev/CyberCop/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
@@ -537,6 +555,12 @@
  <Reference Include="UnityEngine.SpatialTracking">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.7f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
+ <Reference Include="PixelCrushers">
+ <HintPath>C:/Dev/CyberCop/Assets/KevinOwens/Plugins/Pixel Crushers/Common/DLLs/PixelCrushers.dll</HintPath>
+ </Reference>
+ <Reference Include="DialogueSystem">
+ <HintPath>C:/Dev/CyberCop/Assets/KevinOwens/Plugins/Pixel Crushers/Dialogue System/DLLs/DialogueSystem.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Analytics.Editor">
  <HintPath>C:/Dev/CyberCop/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
@@ -545,12 +569,6 @@
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
  <HintPath>C:/Dev/CyberCop/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
- </Reference>
- <Reference Include="DialogueSystem">
- <HintPath>C:/Dev/CyberCop/Assets/KevinOwens/Plugins/Pixel Crushers/Dialogue System/DLLs/DialogueSystem.dll</HintPath>
- </Reference>
- <Reference Include="PixelCrushers">
- <HintPath>C:/Dev/CyberCop/Assets/KevinOwens/Plugins/Pixel Crushers/Common/DLLs/PixelCrushers.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>

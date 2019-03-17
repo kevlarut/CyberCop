@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 114588681902011350}
   - component: {fileID: 114423183836819908}
   - component: {fileID: 114078277183178698}
+  - component: {fileID: 8409919283160247326}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 1159799889
   m_SortingLayer: 3
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300060, guid: 79cb36b7e3feed7458f7b96c429ac7dc, type: 3}
+  m_Sprite: {fileID: 21300064, guid: 79cb36b7e3feed7458f7b96c429ac7dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -326,6 +327,503 @@ MonoBehaviour:
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
   selectedDatabase: {fileID: 11400000, guid: c1cc03cd82f6cdb40afbc0575be25564, type: 2}
+--- !u!114 &8409919283160247326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043985207168798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b519ef76898b7734d9c6104490d6af9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Animations:
+  - clip: {fileID: 7400000, guid: ae0e3805d0fccf44e921d8f4c20b59e1, type: 2}
+    framedata:
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    movementstate: 0
+    movementspeed: 0
+    poise: 0
+    strength: 0
+    damage: 0
+    force: {x: 0, y: 0}
+    direction:
+      x: {x: 0, y: 0}
+      y: {x: 0, y: 0}
+    numtargets: 0
+    hitfxlabel: 0
+    hitfxuid: 0
+  - clip: {fileID: 7400000, guid: e90af1f1fce91ab4282fa51fee0b8ffb, type: 2}
+    framedata:
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    movementstate: 0
+    movementspeed: 0
+    poise: 0
+    strength: 0
+    damage: 0
+    force: {x: 0, y: 0}
+    direction:
+      x: {x: 0, y: 0}
+      y: {x: 0, y: 0}
+    numtargets: 0
+    hitfxlabel: 0
+    hitfxuid: 0
+  - clip: {fileID: 7400000, guid: ae5027666171dc949afb25b7836a581d, type: 2}
+    framedata:
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    movementstate: 0
+    movementspeed: 0
+    poise: 0
+    strength: 0
+    damage: 0
+    force: {x: 0, y: 0}
+    direction:
+      x: {x: 0, y: 0}
+      y: {x: 0, y: 0}
+    numtargets: 0
+    hitfxlabel: 0
+    hitfxuid: 0
+  - clip: {fileID: 7400000, guid: 75201d41d9d550d4fb788f4f8c2a1741, type: 2}
+    framedata:
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    - collider: []
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    movementstate: 0
+    movementspeed: 0
+    poise: 0
+    strength: 0
+    damage: 0
+    force: {x: 0, y: 0}
+    direction:
+      x: {x: 0, y: 0}
+      y: {x: 0, y: 0}
+    numtargets: 0
+    hitfxlabel: 0
+    hitfxuid: 0
+  - clip: {fileID: 7400000, guid: 1b2da9a785fab114d9c347cb5837a36f, type: 2}
+    framedata:
+    - collider:
+      - rect:
+          x: 0
+          y: 14
+          width: 14
+          height: 11
+        type: 0
+      - rect:
+          x: -11
+          y: -5
+          width: 16
+          height: 18
+        type: 0
+      - rect:
+          x: -16
+          y: -18
+          width: 21
+          height: 13
+        type: 0
+      - rect:
+          x: 16
+          y: 4
+          width: 15
+          height: 9
+        type: 1
+      - rect:
+          x: 4
+          y: 5
+          width: 9
+          height: 9
+        type: 0
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0
+      smoothedOffset: 0
+    - collider:
+      - rect:
+          x: 0
+          y: 14
+          width: 14
+          height: 11
+        type: 0
+      - rect:
+          x: -11
+          y: -5
+          width: 16
+          height: 18
+        type: 0
+      - rect:
+          x: -16
+          y: -18
+          width: 21
+          height: 13
+        type: 0
+      - rect:
+          x: 16
+          y: 1
+          width: 13
+          height: 12
+        type: 1
+      - rect:
+          x: 4
+          y: 5
+          width: 9
+          height: 9
+        type: 0
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0.083333336
+      smoothedOffset: 0
+    - collider:
+      - rect:
+          x: 0
+          y: 14
+          width: 14
+          height: 11
+        type: 0
+      - rect:
+          x: -11
+          y: -5
+          width: 16
+          height: 18
+        type: 0
+      - rect:
+          x: -16
+          y: -18
+          width: 21
+          height: 13
+        type: 0
+      - rect:
+          x: 16
+          y: 1
+          width: 13
+          height: 12
+        type: 1
+      - rect:
+          x: 4
+          y: 5
+          width: 9
+          height: 9
+        type: 0
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0.16666667
+      smoothedOffset: 0
+    - collider:
+      - rect:
+          x: -5
+          y: 14
+          width: 14
+          height: 11
+        type: 0
+      - rect:
+          x: -11
+          y: -5
+          width: 18
+          height: 18
+        type: 0
+      - rect:
+          x: -16
+          y: -18
+          width: 21
+          height: 13
+        type: 0
+      - rect:
+          x: 10
+          y: -3
+          width: 8
+          height: 12
+        type: 1
+      - rect:
+          x: 4
+          y: 5
+          width: 9
+          height: 9
+        type: 0
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0.25
+      smoothedOffset: 0
+    - collider:
+      - rect:
+          x: -12
+          y: 14
+          width: 19
+          height: 11
+        type: 0
+      - rect:
+          x: -11
+          y: -5
+          width: 15
+          height: 18
+        type: 0
+      - rect:
+          x: -16
+          y: -18
+          width: 21
+          height: 13
+        type: 0
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0.33333334
+      smoothedOffset: 0
+    - collider:
+      - rect:
+          x: -16
+          y: 14
+          width: 15
+          height: 11
+        type: 0
+      - rect:
+          x: -17
+          y: -5
+          width: 14
+          height: 18
+        type: 0
+      - rect:
+          x: -16
+          y: -18
+          width: 17
+          height: 13
+        type: 0
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0.41666666
+      smoothedOffset: 0
+    movementstate: 0
+    movementspeed: 0
+    poise: 0
+    strength: 0
+    damage: 0
+    force: {x: 0, y: 0}
+    direction:
+      x: {x: 0, y: 0}
+      y: {x: 0, y: 0}
+    numtargets: 0
+    hitfxlabel: 0
+    hitfxuid: 0
+  m_CurrentAnimation: 4
+  m_CurrentFrame: 5
+  m_CurrentCollider: 2
 --- !u!1 &1751137960601866
 GameObject:
   m_ObjectHideFlags: 0

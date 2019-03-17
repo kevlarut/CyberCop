@@ -14,11 +14,13 @@ public class Bullet : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D col)
     {
 		var target = col.gameObject;
-		var isVisible = target.GetComponent<Renderer>() ? target.GetComponent<Renderer>().isVisible : target.GetComponentInChildren<Renderer>().isVisible;
-     	if(isVisible && target.tag == TargetTag)
+     	if (target.tag == TargetTag)
      	{
-			target.GetComponent<Destructible>().OnDamageTaken(1f);
-			Destroy(gameObject);
+			var isVisible = target.GetComponent<Renderer>() ? target.GetComponent<Renderer>().isVisible : target.GetComponentInChildren<Renderer>().isVisible;
+			if (isVisible) {
+				target.GetComponent<Destructible>().OnDamageTaken(1f);
+				Destroy(gameObject);
+			}
      	}
 	}
 }
