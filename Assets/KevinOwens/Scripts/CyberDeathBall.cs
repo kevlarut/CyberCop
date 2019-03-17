@@ -6,6 +6,7 @@ public class CyberDeathBall : MonoBehaviour
     public Gun gun;
     public Transform player;
     public float listeningRange = 2f;
+    public float MinimumShootingDistance = 1f;
      
     public float distanceWithinWhichToFollowThePlayer = 10.0f;
     public float desiredDistanceFromPlayer = 0.5f;
@@ -22,6 +23,7 @@ public class CyberDeathBall : MonoBehaviour
 
     void FixedUpdate()
     {        
+        var distanceFromPlayer = Vector2.Distance(transform.position, player.transform.position);
         if (player != null && IsPlayerWithinSightRange()) {
             if (player.position.x > transform.position.x && !_isFacingRight) {
                 FlipFacing();
@@ -42,12 +44,12 @@ public class CyberDeathBall : MonoBehaviour
             var destination = new Vector3(destinationX, y, player.position.z);
 
             _rigidBody.AddForce((destination - transform.position).normalized * horizontalForce * Time.smoothDeltaTime);
-        }
 
-        if (Input.GetKeyDown(KeyCode.Q) && GetComponent<Renderer>().isVisible)
-        {
-            if (gun.Shoot(_isFacingRight)) {                
-                _animator.SetBool("IsShooting", true);
+            // Shoot the player if he's close enough.
+            if (GetComponent<Renderer>().isVisible && gun.CanShoot() && Mathf.Abs(distanceFromPlayer) <= MinimumShootingDistance) {
+                if (gun.Shoot(_isFacingRight)) {                
+                    _animator.SetBool("IsShooting", true);
+                }
             }
         }
     }
