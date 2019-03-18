@@ -59,9 +59,11 @@ public class HitboxCharacter : MonoBehaviour, ICharacter
                         // PlayHitSound(2f);
                         // EffectSpawner.PlayHitEffect(data.fxID, data.Point, m_Renderer.sortingOrder + 1, !data.TheirHitbox.Owner.FlipX);
 
-                        var target = (HitboxCharacter)data.TheirHitbox.Owner;
-                        var destructible = target.GetComponent<Destructible>();
-				        destructible.OnDamageTaken(data.Damage);
+                        if (data.TheirHitbox.Type == HitboxType.HURT) {
+                            //var target = (HitboxCharacter)data.TheirHitbox.Owner;
+                            var myDestructible = GetComponent<Destructible>();
+                            myDestructible.OnDamageTaken(data.Damage);
+                        }
                     //}
                 }
                 break;

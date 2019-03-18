@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 1159799889
   m_SortingLayer: 3
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300054, guid: 79cb36b7e3feed7458f7b96c429ac7dc, type: 3}
+  m_Sprite: {fileID: 21300064, guid: 79cb36b7e3feed7458f7b96c429ac7dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -343,25 +343,49 @@ MonoBehaviour:
   m_Animations:
   - clip: {fileID: 7400000, guid: ae0e3805d0fccf44e921d8f4c20b59e1, type: 2}
     framedata:
-    - collider: []
+    - collider:
+      - rect:
+          x: -10
+          y: -22
+          width: 18
+          height: 51
+        type: 0
       events: []
       capsuleOffset: {x: 0, y: 0}
       time: 0
       smoothedOffset: 0
-    - collider: []
+    - collider:
+      - rect:
+          x: -10
+          y: -22
+          width: 18
+          height: 51
+        type: 0
       events: []
       capsuleOffset: {x: 0, y: 0}
-      time: 0
+      time: 0.083333336
       smoothedOffset: 0
-    - collider: []
+    - collider:
+      - rect:
+          x: -10
+          y: -22
+          width: 18
+          height: 50
+        type: 0
       events: []
       capsuleOffset: {x: 0, y: 0}
-      time: 0
+      time: 0.16666667
       smoothedOffset: 0
-    - collider: []
+    - collider:
+      - rect:
+          x: -10
+          y: -22
+          width: 18
+          height: 50
+        type: 0
       events: []
       capsuleOffset: {x: 0, y: 0}
-      time: 0
+      time: 0.25
       smoothedOffset: 0
     movementstate: 0
     movementspeed: 0
@@ -377,25 +401,137 @@ MonoBehaviour:
     hitfxuid: 0
   - clip: {fileID: 7400000, guid: e90af1f1fce91ab4282fa51fee0b8ffb, type: 2}
     framedata:
-    - collider: []
+    - collider:
+      - rect:
+          x: -10
+          y: -12
+          width: 20
+          height: 39
+        type: 0
       events: []
       capsuleOffset: {x: 0, y: 0}
       time: 0
       smoothedOffset: 0
-    - collider: []
+    - collider:
+      - rect:
+          x: -10
+          y: -12
+          width: 20
+          height: 39
+        type: 0
       events: []
       capsuleOffset: {x: 0, y: 0}
-      time: 0
+      time: 0.083333336
       smoothedOffset: 0
-    - collider: []
+    - collider:
+      - rect:
+          x: -10
+          y: -12
+          width: 20
+          height: 39
+        type: 0
       events: []
       capsuleOffset: {x: 0, y: 0}
-      time: 0
+      time: 0.16666667
       smoothedOffset: 0
-    - collider: []
+    - collider:
+      - rect:
+          x: -10
+          y: -12
+          width: 20
+          height: 39
+        type: 0
       events: []
       capsuleOffset: {x: 0, y: 0}
-      time: 0
+      time: 0.25
+      smoothedOffset: 0
+    - collider:
+      - rect:
+          x: -10
+          y: -12
+          width: 20
+          height: 39
+        type: 0
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0.33333334
+      smoothedOffset: 0
+    - collider:
+      - rect:
+          x: -10
+          y: -12
+          width: 20
+          height: 39
+        type: 0
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0.41666666
+      smoothedOffset: 0
+    - collider:
+      - rect:
+          x: -10
+          y: -12
+          width: 20
+          height: 39
+        type: 0
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0.5
+      smoothedOffset: 0
+    - collider:
+      - rect:
+          x: -10
+          y: -12
+          width: 20
+          height: 39
+        type: 0
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0.5833333
+      smoothedOffset: 0
+    - collider:
+      - rect:
+          x: -10
+          y: -12
+          width: 20
+          height: 39
+        type: 0
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0.6666667
+      smoothedOffset: 0
+    - collider:
+      - rect:
+          x: -10
+          y: -12
+          width: 20
+          height: 39
+        type: 0
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0.75
+      smoothedOffset: 0
+    - collider:
+      - rect:
+          x: -10
+          y: -12
+          width: 20
+          height: 39
+        type: 0
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0.8333333
+      smoothedOffset: 0
+    - collider:
+      - rect:
+          x: -10
+          y: -12
+          width: 20
+          height: 39
+        type: 0
+      events: []
+      capsuleOffset: {x: 0, y: 0}
+      time: 0.9166667
       smoothedOffset: 0
     movementstate: 0
     movementspeed: 0
@@ -411,85 +547,72 @@ MonoBehaviour:
     hitfxuid: 0
   - clip: {fileID: 7400000, guid: ae5027666171dc949afb25b7836a581d, type: 2}
     framedata:
-    - collider: []
+    - collider:
+      - rect:
+          x: -11
+          y: -23
+          width: 15
+          height: 30
+        type: 0
       events: []
       capsuleOffset: {x: 0, y: 0}
       time: 0
       smoothedOffset: 0
-    - collider: []
+    - collider:
+      - rect:
+          x: -9
+          y: -19
+          width: 11
+          height: 24
+        type: 0
+      - rect:
+          x: -1
+          y: 2
+          width: 14
+          height: 26
+        type: 0
       events: []
       capsuleOffset: {x: 0, y: 0}
-      time: 0
+      time: 0.083333336
       smoothedOffset: 0
-    - collider: []
+    - collider:
+      - rect:
+          x: -13
+          y: -7
+          width: 20
+          height: 30
+        type: 0
       events: []
       capsuleOffset: {x: 0, y: 0}
-      time: 0
+      time: 0.16666667
       smoothedOffset: 0
-    - collider: []
+    - collider:
+      - rect:
+          x: -23
+          y: 4
+          width: 23
+          height: 24
+        type: 0
+      - rect:
+          x: -11
+          y: -22
+          width: 16
+          height: 26
+        type: 0
       events: []
       capsuleOffset: {x: 0, y: 0}
-      time: 0
+      time: 0.25
       smoothedOffset: 0
-    - collider: []
+    - collider:
+      - rect:
+          x: -9
+          y: -25
+          width: 16
+          height: 34
+        type: 0
       events: []
       capsuleOffset: {x: 0, y: 0}
-      time: 0
-      smoothedOffset: 0
-    - collider: []
-      events: []
-      capsuleOffset: {x: 0, y: 0}
-      time: 0
-      smoothedOffset: 0
-    - collider: []
-      events: []
-      capsuleOffset: {x: 0, y: 0}
-      time: 0
-      smoothedOffset: 0
-    - collider: []
-      events: []
-      capsuleOffset: {x: 0, y: 0}
-      time: 0
-      smoothedOffset: 0
-    - collider: []
-      events: []
-      capsuleOffset: {x: 0, y: 0}
-      time: 0
-      smoothedOffset: 0
-    - collider: []
-      events: []
-      capsuleOffset: {x: 0, y: 0}
-      time: 0
-      smoothedOffset: 0
-    - collider: []
-      events: []
-      capsuleOffset: {x: 0, y: 0}
-      time: 0
-      smoothedOffset: 0
-    - collider: []
-      events: []
-      capsuleOffset: {x: 0, y: 0}
-      time: 0
-      smoothedOffset: 0
-    - collider: []
-      events: []
-      capsuleOffset: {x: 0, y: 0}
-      time: 0
-      smoothedOffset: 0
-    - collider: []
-      events: []
-      capsuleOffset: {x: 0, y: 0}
-      time: 0
-      smoothedOffset: 0
-    - collider: []
-      events: []
-      capsuleOffset: {x: 0, y: 0}
-      time: 0
-      smoothedOffset: 0
-    - collider: []
-      events: []
-      capsuleOffset: {x: 0, y: 0}
-      time: 0
+      time: 0.33333334
       smoothedOffset: 0
     movementstate: 0
     movementspeed: 0
@@ -505,110 +628,38 @@ MonoBehaviour:
     hitfxuid: 0
   - clip: {fileID: 7400000, guid: 75201d41d9d550d4fb788f4f8c2a1741, type: 2}
     framedata:
-    - collider: []
+    - collider:
+      - rect:
+          x: -14
+          y: -19
+          width: 14
+          height: 48
+        type: 0
       events: []
       capsuleOffset: {x: 0, y: 0}
       time: 0
       smoothedOffset: 0
-    - collider: []
+    - collider:
+      - rect:
+          x: -20
+          y: -21
+          width: 25
+          height: 47
+        type: 0
       events: []
       capsuleOffset: {x: 0, y: 0}
-      time: 0
+      time: 0.083333336
       smoothedOffset: 0
-    - collider: []
+    - collider:
+      - rect:
+          x: -20
+          y: -21
+          width: 25
+          height: 47
+        type: 0
       events: []
       capsuleOffset: {x: 0, y: 0}
-      time: 0
-      smoothedOffset: 0
-    - collider: []
-      events: []
-      capsuleOffset: {x: 0, y: 0}
-      time: 0
-      smoothedOffset: 0
-    - collider: []
-      events: []
-      capsuleOffset: {x: 0, y: 0}
-      time: 0
-      smoothedOffset: 0
-    - collider: []
-      events: []
-      capsuleOffset: {x: 0, y: 0}
-      time: 0
-      smoothedOffset: 0
-    - collider: []
-      events: []
-      capsuleOffset: {x: 0, y: 0}
-      time: 0
-      smoothedOffset: 0
-    - collider: []
-      events: []
-      capsuleOffset: {x: 0, y: 0}
-      time: 0
-      smoothedOffset: 0
-    - collider: []
-      events: []
-      capsuleOffset: {x: 0, y: 0}
-      time: 0
-      smoothedOffset: 0
-    - collider: []
-      events: []
-      capsuleOffset: {x: 0, y: 0}
-      time: 0
-      smoothedOffset: 0
-    - collider: []
-      events: []
-      capsuleOffset: {x: 0, y: 0}
-      time: 0
-      smoothedOffset: 0
-    - collider: []
-      events: []
-      capsuleOffset: {x: 0, y: 0}
-      time: 0
-      smoothedOffset: 0
-    - collider: []
-      events: []
-      capsuleOffset: {x: 0, y: 0}
-      time: 0
-      smoothedOffset: 0
-    - collider: []
-      events: []
-      capsuleOffset: {x: 0, y: 0}
-      time: 0
-      smoothedOffset: 0
-    - collider: []
-      events: []
-      capsuleOffset: {x: 0, y: 0}
-      time: 0
-      smoothedOffset: 0
-    - collider: []
-      events: []
-      capsuleOffset: {x: 0, y: 0}
-      time: 0
-      smoothedOffset: 0
-    - collider: []
-      events: []
-      capsuleOffset: {x: 0, y: 0}
-      time: 0
-      smoothedOffset: 0
-    - collider: []
-      events: []
-      capsuleOffset: {x: 0, y: 0}
-      time: 0
-      smoothedOffset: 0
-    - collider: []
-      events: []
-      capsuleOffset: {x: 0, y: 0}
-      time: 0
-      smoothedOffset: 0
-    - collider: []
-      events: []
-      capsuleOffset: {x: 0, y: 0}
-      time: 0
-      smoothedOffset: 0
-    - collider: []
-      events: []
-      capsuleOffset: {x: 0, y: 0}
-      time: 0
+      time: 0.16666667
       smoothedOffset: 0
     movementstate: 0
     movementspeed: 0
@@ -823,8 +874,8 @@ MonoBehaviour:
     hitfxlabel: 0
     hitfxuid: 0
   m_CurrentAnimation: 4
-  m_CurrentFrame: 0
-  m_CurrentCollider: 2
+  m_CurrentFrame: 5
+  m_CurrentCollider: 0
 --- !u!114 &5094197131185218336
 MonoBehaviour:
   m_ObjectHideFlags: 0
