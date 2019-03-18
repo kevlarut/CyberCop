@@ -2283,6 +2283,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300056, guid: d958dbe25b35d2842be57fa58bee7f8e,
         type: 3}
+    - target: {fileID: 370246570, guid: 06d71bf4f82f0df42a98a3c228d9189c, type: 3}
+      propertyPath: Ping
+      value: 
+      objectReference: {fileID: 7468456038803952257, guid: ebae193bcdd568e448e50982fc7a18db,
+        type: 3}
     - target: {fileID: 370246576, guid: 06d71bf4f82f0df42a98a3c228d9189c, type: 3}
       propertyPath: target
       value: 
