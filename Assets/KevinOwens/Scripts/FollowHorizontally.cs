@@ -3,17 +3,15 @@
  
  public class FollowHorizontally : MonoBehaviour {
      
-    public Transform target;
     public float Offset = 0f;
-
-    private Vector3 velocity = Vector3.zero;
+    public Transform Target;
  
     void Update () 
     {
-        if (target)
+        if (Target)
         {
-            var targetVector = target.position;
-            var destinationX = target.position.x + Offset;
+            var targetVector = Target.position;
+            var destinationX = Target.position.x + Offset;
             transform.position = new Vector3(destinationX, transform.position.y, transform.position.z);        
 
          }     

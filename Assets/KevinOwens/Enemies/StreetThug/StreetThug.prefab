@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 000af67b8ea0a0b459288f62192b8a72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  Target: {fileID: 0}
   PunchCoolDownTimeInSeconds: 2
   desiredMinimumDistanceFromPlayer: 0
   desiredMaximumDistanceFromPlayer: 0.3
@@ -426,7 +426,7 @@ MonoBehaviour:
     movementspeed: 0
     poise: 0
     strength: 0
-    damage: 0
+    damage: 1
     force: {x: 0, y: 0}
     direction:
       x: {x: 0, y: 0}

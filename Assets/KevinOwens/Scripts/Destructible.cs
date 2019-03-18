@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class Destructible : MonoBehaviour {
 
     public float MaxHitPoints = 3f;

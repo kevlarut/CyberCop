@@ -1,28 +1,28 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(Gun))]
 public class KnifeThrower : MonoBehaviour
 {
-    public Gun gun;
-    public Transform target;
+    public Gun Gun;
+    public Transform Target;
      
-    public float MinimumShootingDistance = 3.0f;
+    public float Range = 3.0f;
 
-    private Animator animator;
-    private Rigidbody2D rigidBody;
+    private Animator _animator;
 
     void Start()
     {
-        animator = GetComponentInChildren<Animator>();
-        rigidBody = GetComponent<Rigidbody2D>();
+        _animator = GetComponentInChildren<Animator>();
     }
 
     void FixedUpdate()
     {        
-        if (target != null) {            
-            var distanceFromPlayer = target.transform.position.x - transform.position.x;
-            if (Mathf.Abs(distanceFromPlayer) <= MinimumShootingDistance) {
-                if (gun.CanShoot()) {                                    
-                    animator.SetBool("IsShooting", true);
+        if (Target != null) {            
+            var distanceFromPlayer = Target.transform.position.x - transform.position.x;
+            if (Mathf.Abs(distanceFromPlayer) <= Range) {
+                if (Gun.CanShoot()) {                                    
+                    _animator.SetBool("IsShooting", true);
                 }
             }
         }

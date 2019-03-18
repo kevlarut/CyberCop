@@ -265,6 +265,7 @@
      <Compile Include="Assets\KevinOwens\Scripts\FollowObject.cs" />
      <Compile Include="Assets\KevinOwens\Scripts\FollowRepeatScroller.cs" />
      <Compile Include="Assets\KevinOwens\Scripts\Gun.cs" />
+     <Compile Include="Assets\KevinOwens\Scripts\HitboxCharacter.cs" />
      <Compile Include="Assets\KevinOwens\Scripts\Hover.cs" />
      <Compile Include="Assets\KevinOwens\Scripts\KillZone.cs" />
      <Compile Include="Assets\KevinOwens\Scripts\KnifeThrower.cs" />

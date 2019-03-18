@@ -1,5 +1,7 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(Gun))]
 public class Punk : MonoBehaviour
 {
     public Gun gun;
@@ -11,13 +13,11 @@ public class Punk : MonoBehaviour
     public float runningSpeed = 2.0f;
 
     private Animator animator;
-    private Rigidbody2D rigidBody;
     private bool isFacingRight = true;
 
     void Start()
     {
         animator = GetComponent<Animator>();
-        rigidBody = GetComponent<Rigidbody2D>();
     }
 
     void FixedUpdate()
