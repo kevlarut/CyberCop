@@ -7,8 +7,8 @@ using BlackGardenStudios.HitboxStudioPro;
  [RequireComponent(typeof(Destructible))]
 public class HitboxCharacter : MonoBehaviour, ICharacter
 {     
-    private Animator animator;
-    private SpriteRenderer SpriteRenderer;
+    private Animator _animator;
+    private SpriteRenderer _spriteRenderer;
 
     [SerializeField]
     protected SpritePalette m_ActivePalette;
@@ -29,13 +29,14 @@ public class HitboxCharacter : MonoBehaviour, ICharacter
 
     public bool FlipX
     {
-        get { return SpriteRenderer.flipX; }
-        protected set { if(LockFlip == false) SpriteRenderer.flipX = value; }
+        get { return _spriteRenderer.flipX; }
+        protected set { if(LockFlip == false) _spriteRenderer.flipX = value; }
     }
 
     void Start()
     {
-        SpriteRenderer = GetComponent<SpriteRenderer>();
+        _animator = GetComponent<Animator>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     public virtual void HitboxContact(ContactData data)
@@ -61,6 +62,7 @@ public class HitboxCharacter : MonoBehaviour, ICharacter
 
                         if (data.TheirHitbox.Type == HitboxType.HURT) {
                             //var target = (HitboxCharacter)data.TheirHitbox.Owner;
+                            _animator.SetTrigger("IsHurting");
                             var myDestructible = GetComponent<Destructible>();
                             myDestructible.OnDamageTaken(data.Damage);
                         }
