@@ -13,7 +13,7 @@ namespace Assets.Scripts
             if (destructible != null) {
                 var splash = Instantiate(SplashGameObject);
                 splash.transform.Translate(target.transform.position.x, transform.position.y, 0);
-                destructible.OnDamageTaken(destructible.MaxHitPoints, false);
+                destructible.OnDamageTaken(destructible.MaxHitPoints, new Vector2(0f, 0f), false);
             }
         }
     }

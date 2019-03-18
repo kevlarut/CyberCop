@@ -19,11 +19,16 @@ public class Destructible : MonoBehaviour {
 	void Update () {		
 	}
 
-    public void OnDamageTaken(float damage, bool shouldExplodeOnDeath = true) {
+    public void OnDamageTaken(float damage, Vector2 point, bool shouldExplodeOnDeath = true) {
+        var position = _rigidBody.transform.position;
+        if (point.x != 0 && point.y != 0) {
+            position = new Vector3(point.x, point.y, 0f);
+        }
+
         _damageTaken += damage;        
         if (_damageTaken >= MaxHitPoints) {
             if (shouldExplodeOnDeath) {
-                Instantiate(Explosion, _rigidBody.transform.position, Quaternion.identity);
+                Instantiate(Explosion, position, Quaternion.identity);
             }
 
             var playerMovementController = GetComponent<PlayerMovementController>();
@@ -35,7 +40,7 @@ public class Destructible : MonoBehaviour {
             }
         }
         else {
-            var pingInstance = Instantiate(Ping, _rigidBody.transform.position, Quaternion.identity);	
+            var pingInstance = Instantiate(Ping, position, Quaternion.identity);	
             pingInstance.transform.parent = gameObject.transform;
             var bulletForce = 10f;
             _rigidBody.AddForce(Vector2.right * bulletForce);

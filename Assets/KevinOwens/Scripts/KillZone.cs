@@ -9,7 +9,7 @@ namespace Assets.Scripts
             var target = collision.gameObject;
             var destructible = target.GetComponent<Destructible>();
             if (destructible != null) {
-                destructible.OnDamageTaken(destructible.MaxHitPoints, false);
+                destructible.OnDamageTaken(destructible.MaxHitPoints, new Vector2(0f, 0f), false);
             }
         }
     }

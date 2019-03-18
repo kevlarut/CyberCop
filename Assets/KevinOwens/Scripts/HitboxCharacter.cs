@@ -64,7 +64,7 @@ public class HitboxCharacter : MonoBehaviour, ICharacter
                             //var target = (HitboxCharacter)data.TheirHitbox.Owner;
                             _animator.SetTrigger("IsHurting");
                             var myDestructible = GetComponent<Destructible>();
-                            myDestructible.OnDamageTaken(data.Damage);
+                            myDestructible.OnDamageTaken(data.Damage, data.Point);
                         }
                     //}
                 }

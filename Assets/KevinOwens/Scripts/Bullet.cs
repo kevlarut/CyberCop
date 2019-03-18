@@ -18,7 +18,7 @@ public class Bullet : MonoBehaviour {
      	{
 			var targetRenderer = target.GetComponent<Renderer>() ?? target.GetComponentInChildren<Renderer>();
 			if (targetRenderer != null && targetRenderer.isVisible) {	
-				target.GetComponent<Destructible>().OnDamageTaken(1f);
+				target.GetComponent<Destructible>().OnDamageTaken(1f, new Vector2(0f, 0f));
 				Destroy(gameObject);
 			}
      	}
