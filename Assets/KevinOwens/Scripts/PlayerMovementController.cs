@@ -83,8 +83,11 @@ public class PlayerMovementController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag != "Enemy") 
-        {
+        // if (collision.gameObject.tag != "Enemy") 
+        // {
+        //     grounded = true;
+        // }
+        if (rigidBody.velocity.y < 0.1f) {
             grounded = true;
         }
     }
