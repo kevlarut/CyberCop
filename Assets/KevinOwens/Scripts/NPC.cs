@@ -1,5 +1,6 @@
  using UnityEngine;
  using System.Collections;
+ using PixelCrushers;
  
  public class NPC : MonoBehaviour {
      
@@ -25,5 +26,10 @@
     {
         isFacingRight = !isFacingRight;
         transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
+
+        var alwaysFaceCameras = GetComponentsInChildren<AlwaysFaceCamera>();
+        foreach (var alwaysFaceCamera in alwaysFaceCameras) {
+            alwaysFaceCamera.rotate180 = !isFacingRight;
+        }
     }
  }

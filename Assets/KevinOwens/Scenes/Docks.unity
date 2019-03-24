@@ -2326,6 +2326,16 @@ PrefabInstance:
       propertyPath: Target
       value: 
       objectReference: {fileID: 355083205}
+    - target: {fileID: 6534945044834991256, guid: 617ceb96d64067e4ba9266e38a76c93b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6535585999410128728, guid: 617ceb96d64067e4ba9266e38a76c93b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6567089393985300415, guid: 617ceb96d64067e4ba9266e38a76c93b,
         type: 3}
       propertyPath: m_Animations.Array.size
