@@ -8,13 +8,15 @@ public class Hover : MonoBehaviour {
 	public float hoverSpeed = 1f;
 
 	private Vector2 tempPosition;
+	private float startingY = 0f;
 	
 	void Start() {
-		tempPosition = transform.position;		
+		tempPosition = transform.position;
+		startingY = transform.position.y;
 	}
 
 	void FixedUpdate () {
-		tempPosition.y = Mathf.Sin(Time.realtimeSinceStartup * hoverSpeed) * amplitude;
+		tempPosition.y = startingY + Mathf.Sin(Time.realtimeSinceStartup * hoverSpeed) * amplitude;
 		transform.position = tempPosition;
 	}
 }
