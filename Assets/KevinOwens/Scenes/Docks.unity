@@ -1702,6 +1702,36 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4243474468218154, guid: 9d2dc0503882bbf41b4ad563a17d1474, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4219021586622940, guid: 9d2dc0503882bbf41b4ad563a17d1474, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4219021586622940, guid: 9d2dc0503882bbf41b4ad563a17d1474, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4219021586622940, guid: 9d2dc0503882bbf41b4ad563a17d1474, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4166891949241094, guid: 9d2dc0503882bbf41b4ad563a17d1474, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 212344987113624772, guid: 9d2dc0503882bbf41b4ad563a17d1474,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212344987113624772, guid: 9d2dc0503882bbf41b4ad563a17d1474,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d2dc0503882bbf41b4ad563a17d1474, type: 3}
 --- !u!1 &1788419989
@@ -2132,7 +2162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MinSpawnDelay: 1
   MaxSpawnDelay: 10
-  GameObject: {fileID: 1318781225633614, guid: ebb6c8265be286444982956a6280a7db, type: 3}
+  GameObject: {fileID: 1333704732018238, guid: c07ec4008a3f7814190dd74ac976caa0, type: 3}
 --- !u!4 &2082677421
 Transform:
   m_ObjectHideFlags: 0
@@ -2214,6 +2244,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_DrawHalo
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212344987113624772, guid: 9d2dc0503882bbf41b4ad563a17d1474,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d2dc0503882bbf41b4ad563a17d1474, type: 3}
