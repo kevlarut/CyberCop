@@ -1623,6 +1623,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1609895917 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1735308417427854, guid: 0cdc3b7e72e1e2042b225f950224f649,
+    type: 3}
+  m_PrefabInstance: {fileID: 167638236}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1609895918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609895917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3d6b1559e83544cfa4a663005a36918, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1768369130
 GameObject:
   m_ObjectHideFlags: 0
@@ -2230,6 +2248,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 212344987113624772, guid: 9d2dc0503882bbf41b4ad563a17d1474,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 108777103855428310, guid: 9d2dc0503882bbf41b4ad563a17d1474,
         type: 3}
       propertyPath: m_Shadows.m_Type
@@ -2244,11 +2267,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_DrawHalo
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 212344987113624772, guid: 9d2dc0503882bbf41b4ad563a17d1474,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d2dc0503882bbf41b4ad563a17d1474, type: 3}

@@ -14,6 +14,9 @@ public class Explosion : MonoBehaviour {
         _light = GetComponent<Light>();
 
 		startTime = Time.time;
+
+		var mainCamera = GameObject.FindGameObjectsWithTag("MainCamera")[0];
+		mainCamera.GetComponent<Shaker>().TriggerShake();
 	}
 	
 	void Update () {
