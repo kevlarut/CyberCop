@@ -25,13 +25,24 @@ public class PlayerMovementController : MonoBehaviour
         SpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    void Update()
-    {
+    void FixedUpdate() {
+
         if (isTalking) {
             return;
         }
 
+        var maxVelocity = 3f;
         var walkingInput = Input.GetAxisRaw("Horizontal");
+        var movement = new Vector2(walkingInput, 0f);
+
+        //if (grounded) {
+            rigidBody.AddForce(movement * runningSpeed);
+            
+            Vector3 clampVel = rigidBody.velocity;
+            clampVel.x = Mathf.Clamp(clampVel.x, -maxVelocity, maxVelocity);
+            rigidBody.velocity = clampVel;
+        //}
+
         var jumpingInput = Input.GetAxisRaw("Vertical");
 
         var isJumping = !grounded && rigidBody.velocity.y > 0.1f;
@@ -39,8 +50,6 @@ public class PlayerMovementController : MonoBehaviour
 
         animator.SetBool("IsRunning", isRunning);
         animator.SetBool("IsJumping", isJumping);
-
-        rigidBody.velocity = new Vector2(walkingInput * runningSpeed, rigidBody.velocity.y);
 
         if (jumpingInput > 0 && grounded)
         {
@@ -55,6 +64,10 @@ public class PlayerMovementController : MonoBehaviour
         else if (walkingInput < 0 && isFacingRight)
         {
             FlipFacing();
+        }
+
+        if (isTalking) {
+            return;
         }
 
         if (Input.GetButton("Fire1"))

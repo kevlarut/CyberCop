@@ -123,24 +123,3 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.33333334
-    functionName: UpdateHitbox
-    data: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAEBBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPv////0////HgAAABoAAAAAAAAACQAAAAoAAAARAAAACQAAAAAAAAA=
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 1
-    intParameter: 4
-    messageOptions: 0
-  - time: 0.33333334
-    functionName: Shoot
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.41666666
-    functionName: UpdateHitbox
-    data: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAEBBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPv////0////HgAAABoAAAAAAAAACQAAAAoAAAARAAAACQAAAAAAAAA=
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 1
-    intParameter: 5
-    messageOptions: 0

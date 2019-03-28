@@ -168,8 +168,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PunchCoolDownTimeInSeconds: 1
-  jumpForce: 200
-  runningSpeed: 2
+  jumpForce: 250
+  runningSpeed: 10
   Gun: {fileID: 114611044935440798}
 --- !u!114 &114588681902011350
 MonoBehaviour:
