@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 114078277183178698}
   - component: {fileID: 8409919283160247326}
   - component: {fileID: 5094197131185218336}
+  - component: {fileID: 1357198845}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -169,7 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PunchCoolDownTimeInSeconds: 1
   jumpForce: 250
-  runningSpeed: 10
+  runningSpeed: 15
   Gun: {fileID: 114611044935440798}
 --- !u!114 &114588681902011350
 MonoBehaviour:
@@ -890,6 +891,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ActivePalette: {fileID: 0}
   m_PaletteGroup: {fileID: 0}
+--- !u!114 &1357198845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043985207168798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a64578247383140469c45370654a984a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actor: Cyber Cop
+  persistentDataName: 
+  portrait: {fileID: 0}
+  barkUISettings:
+    barkUI: {fileID: 0}
+    barkUIOffset: {x: 0, y: 2, z: 0}
+  standardDialogueUISettings:
+    subtitlePanelNumber: 0
+    customSubtitlePanel: {fileID: 0}
+    menuPanelNumber: 0
+    customMenuPanel: {fileID: 0}
+    portraitAnimatorController: {fileID: 0}
+    setSubtitleColor: 0
+    applyColorToPrependedName: 0
+    prependActorNameSeparator: ': '
+    subtitleColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1751137960601866
 GameObject:
   m_ObjectHideFlags: 0

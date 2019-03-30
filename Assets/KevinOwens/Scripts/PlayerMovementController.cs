@@ -31,17 +31,20 @@ public class PlayerMovementController : MonoBehaviour
             return;
         }
 
-        var maxVelocity = 3f;
+        var maxVelocity = 2.5f;
         var walkingInput = Input.GetAxisRaw("Horizontal");
         var movement = new Vector2(walkingInput, 0f);
 
-        //if (grounded) {
-            rigidBody.AddForce(movement * runningSpeed);
-            
-            Vector3 clampVel = rigidBody.velocity;
-            clampVel.x = Mathf.Clamp(clampVel.x, -maxVelocity, maxVelocity);
-            rigidBody.velocity = clampVel;
-        //}
+        var forceModifier = 1f;
+        if (!grounded) {
+            forceModifier = 0.25f;
+        }
+
+        rigidBody.AddForce(movement * runningSpeed * forceModifier);
+        
+        Vector3 clampVel = rigidBody.velocity;
+        clampVel.x = Mathf.Clamp(clampVel.x, -maxVelocity, maxVelocity);
+        rigidBody.velocity = clampVel;
 
         var jumpingInput = Input.GetAxisRaw("Vertical");
 
