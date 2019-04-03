@@ -20,7 +20,7 @@ public class Destructible : MonoBehaviour {
 	}
 
     public void OnDamageTaken(float damage, Vector2 point, bool shouldExplodeOnDeath = true) {
-        var position = _rigidBody.transform.position;
+        var position = _rigidBody ? _rigidBody.transform.position : transform.position;
         if (point.x != 0 && point.y != 0) {
             position = new Vector3(point.x, point.y, 0f);
         }

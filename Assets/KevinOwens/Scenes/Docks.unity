@@ -1254,26 +1254,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 355083204}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &370246569 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 370246569, guid: 06d71bf4f82f0df42a98a3c228d9189c,
-    type: 3}
-  m_PrefabInstance: {fileID: 5851058646500522487}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &370246570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 370246569}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f19295950c1e6fb479c9ad22cf8a621e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ActivePalette: {fileID: 0}
-  m_PaletteGroup: {fileID: 0}
 --- !u!1 &395654386
 GameObject:
   m_ObjectHideFlags: 0
@@ -3290,39 +3270,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 370246574, guid: 06d71bf4f82f0df42a98a3c228d9189c, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300056, guid: d958dbe25b35d2842be57fa58bee7f8e,
-        type: 3}
-    - target: {fileID: 370246570, guid: 06d71bf4f82f0df42a98a3c228d9189c, type: 3}
-      propertyPath: Ping
-      value: 
-      objectReference: {fileID: 3661809074778296753, guid: 4b8574cbf06d67c4795dea024e149322,
-        type: 3}
-    - target: {fileID: 370246576, guid: 06d71bf4f82f0df42a98a3c228d9189c, type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 355083205}
     - target: {fileID: 370246576, guid: 06d71bf4f82f0df42a98a3c228d9189c, type: 3}
       propertyPath: Target
       value: 
       objectReference: {fileID: 355083205}
-    - target: {fileID: 810849346753990444, guid: 06d71bf4f82f0df42a98a3c228d9189c,
-        type: 3}
-      propertyPath: m_CurrentAnimation
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 810849346753990444, guid: 06d71bf4f82f0df42a98a3c228d9189c,
-        type: 3}
-      propertyPath: m_CurrentFrame
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 810849346753990444, guid: 06d71bf4f82f0df42a98a3c228d9189c,
-        type: 3}
-      propertyPath: m_Animations.Array.data[0].damage
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06d71bf4f82f0df42a98a3c228d9189c, type: 3}
 --- !u!1001 &6567935029055221891

@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 370246570}
   - component: {fileID: 370246576}
   - component: {fileID: 810849346753990444}
+  - component: {fileID: 6344859816485072391}
   m_Layer: 0
   m_Name: StreetThug
   m_TagString: Enemy
@@ -30,10 +31,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 370246569}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.876, y: -0.553, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 2115515910}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -74,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 1159799889
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300020, guid: d958dbe25b35d2842be57fa58bee7f8e, type: 3}
+  m_Sprite: {fileID: 21300056, guid: d958dbe25b35d2842be57fa58bee7f8e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -164,7 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitPoints: 3
-  Ping: {fileID: 1448462780922752, guid: 3dee1b25f5bfb154b9c4f1e4a48d303e, type: 3}
+  Ping: {fileID: 3661809074778296753, guid: 4b8574cbf06d67c4795dea024e149322, type: 3}
   Explosion: {fileID: 1046083001867438, guid: 83a749f31e181d749aa91dcc357d0001, type: 3}
 --- !u!114 &370246576
 MonoBehaviour:
@@ -179,6 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 0}
+  GroundDetection: {fileID: 2115515910}
   PunchCoolDownTimeInSeconds: 2
   desiredMinimumDistanceFromPlayer: 0
   desiredMaximumDistanceFromPlayer: 0.3
@@ -249,7 +252,7 @@ MonoBehaviour:
     movementspeed: 0
     poise: 0
     strength: 0
-    damage: 0
+    damage: 1
     force: {x: 0, y: 0}
     direction:
       x: {x: 0, y: 0}
@@ -577,6 +580,50 @@ MonoBehaviour:
     numtargets: 0
     hitfxlabel: 0
     hitfxuid: 0
-  m_CurrentAnimation: 2
-  m_CurrentFrame: 3
+  m_CurrentAnimation: 0
+  m_CurrentFrame: 0
   m_CurrentCollider: 2
+--- !u!114 &6344859816485072391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370246569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f19295950c1e6fb479c9ad22cf8a621e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ActivePalette: {fileID: 0}
+  m_PaletteGroup: {fileID: 0}
+--- !u!1 &2115515909
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2115515910}
+  m_Layer: 0
+  m_Name: GroundDetection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2115515910
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115515909}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.148, y: -0.257, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 370246575}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -6,6 +6,7 @@ using BlackGardenStudios.HitboxStudioPro;
 public class StreetThug : MonoBehaviour
 {
     public Transform Target;
+    public Transform GroundDetection;
      
 	public float PunchCoolDownTimeInSeconds = 1f;
     public float desiredMinimumDistanceFromPlayer = 1.0f;
@@ -17,6 +18,8 @@ public class StreetThug : MonoBehaviour
 	private float punchCoolDownTimeStamp;
     private bool isFacingRight = true;
     private SpriteRenderer SpriteRenderer;
+
+    private float groundDetectionDistance = 1f;
 
     void Start()
     {
@@ -39,11 +42,18 @@ public class StreetThug : MonoBehaviour
             var distanceFromPlayer = Target.transform.position.x - transform.position.x;
             if (Mathf.Abs(distanceFromPlayer) > desiredMaximumDistanceFromPlayer) {  
                 FaceTowardsTarget();
-                float step = runningSpeed * Time.deltaTime;
-                var targetPosition = Target.position;
-                targetPosition.y = transform.position.y;
-                transform.position = Vector2.MoveTowards(transform.position, targetPosition, step);
-                _animator.SetBool("IsWalking", true);
+
+                var groundRaycastHit = Physics2D.Raycast(GroundDetection.position, Vector2.down, groundDetectionDistance);
+                if (groundRaycastHit.collider == false || groundRaycastHit.collider.tag != "Platform") {
+                    // We can't move there, it's a vacuum
+                }
+                else {     
+                    float step = runningSpeed * Time.deltaTime;
+                    var targetPosition = Target.position;
+                    targetPosition.y = transform.position.y;
+                    transform.position = Vector2.MoveTowards(transform.position, targetPosition, step);
+                    _animator.SetBool("IsWalking", true);
+                }
             }
             else {
                 FaceTowardsTarget();

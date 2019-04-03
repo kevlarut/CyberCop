@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 61851840873501070}
   m_Layer: 0
   m_Name: Boardwalk Background
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -371,7 +371,7 @@ GameObject:
   - component: {fileID: 4058295009174828}
   m_Layer: 0
   m_Name: Boardwalk
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
