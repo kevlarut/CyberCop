@@ -22,7 +22,7 @@ MonoBehaviour:
     m_PerlinScale: 0.5
     m_AutoTransform: 0
     m_Output: 0
-    m_ColliderType: 0
+    m_ColliderType: 1
   - m_Neighbors: 0000000002000000000000000100000001000000010000000100000001000000
     m_Sprites:
     - {fileID: 21300002, guid: 901454e9bbbe69a4892605a6b001d5f3, type: 3}
@@ -30,7 +30,7 @@ MonoBehaviour:
     m_PerlinScale: 0.5
     m_AutoTransform: 0
     m_Output: 0
-    m_ColliderType: 0
+    m_ColliderType: 1
   - m_Neighbors: 0000000002000000000000000100000002000000010000000100000000000000
     m_Sprites:
     - {fileID: 21300004, guid: 901454e9bbbe69a4892605a6b001d5f3, type: 3}
@@ -38,7 +38,7 @@ MonoBehaviour:
     m_PerlinScale: 0.5
     m_AutoTransform: 0
     m_Output: 0
-    m_ColliderType: 0
+    m_ColliderType: 1
   - m_Neighbors: 0000000002000000000000000200000002000000000000000200000000000000
     m_Sprites:
     - {fileID: 21300006, guid: 901454e9bbbe69a4892605a6b001d5f3, type: 3}
@@ -46,7 +46,7 @@ MonoBehaviour:
     m_PerlinScale: 0.5
     m_AutoTransform: 0
     m_Output: 0
-    m_ColliderType: 0
+    m_ColliderType: 1
   - m_Neighbors: 0000000002000000000000000200000001000000000000000100000002000000
     m_Sprites:
     - {fileID: 21300008, guid: 901454e9bbbe69a4892605a6b001d5f3, type: 3}
@@ -54,7 +54,7 @@ MonoBehaviour:
     m_PerlinScale: 0.5
     m_AutoTransform: 0
     m_Output: 0
-    m_ColliderType: 0
+    m_ColliderType: 1
   - m_Neighbors: 0200000002000000020000000100000001000000010000000200000001000000
     m_Sprites:
     - {fileID: 21300010, guid: 901454e9bbbe69a4892605a6b001d5f3, type: 3}
@@ -62,7 +62,7 @@ MonoBehaviour:
     m_PerlinScale: 0.5
     m_AutoTransform: 0
     m_Output: 0
-    m_ColliderType: 0
+    m_ColliderType: 1
   - m_Neighbors: 0000000002000000000000000100000002000000020000000100000000000000
     m_Sprites:
     - {fileID: 21300012, guid: 901454e9bbbe69a4892605a6b001d5f3, type: 3}
@@ -70,7 +70,7 @@ MonoBehaviour:
     m_PerlinScale: 0.5
     m_AutoTransform: 0
     m_Output: 0
-    m_ColliderType: 0
+    m_ColliderType: 1
   - m_Neighbors: 0100000001000000020000000100000001000000020000000100000002000000
     m_Sprites:
     - {fileID: 21300014, guid: 901454e9bbbe69a4892605a6b001d5f3, type: 3}
@@ -78,7 +78,7 @@ MonoBehaviour:
     m_PerlinScale: 0.5
     m_AutoTransform: 0
     m_Output: 0
-    m_ColliderType: 0
+    m_ColliderType: 1
   - m_Neighbors: 0000000001000000010000000200000001000000000000000100000001000000
     m_Sprites:
     - {fileID: 21300016, guid: 901454e9bbbe69a4892605a6b001d5f3, type: 3}
@@ -86,7 +86,7 @@ MonoBehaviour:
     m_PerlinScale: 0.5
     m_AutoTransform: 0
     m_Output: 0
-    m_ColliderType: 0
+    m_ColliderType: 1
   - m_Neighbors: 0100000001000000010000000100000001000000010000000100000001000000
     m_Sprites:
     - {fileID: 21300018, guid: 901454e9bbbe69a4892605a6b001d5f3, type: 3}
@@ -94,7 +94,7 @@ MonoBehaviour:
     m_PerlinScale: 0.5
     m_AutoTransform: 0
     m_Output: 0
-    m_ColliderType: 0
+    m_ColliderType: 1
   - m_Neighbors: 0100000001000000000000000100000002000000010000000100000000000000
     m_Sprites:
     - {fileID: 21300020, guid: 901454e9bbbe69a4892605a6b001d5f3, type: 3}
@@ -102,7 +102,7 @@ MonoBehaviour:
     m_PerlinScale: 0.5
     m_AutoTransform: 0
     m_Output: 0
-    m_ColliderType: 0
+    m_ColliderType: 1
   - m_Neighbors: 0000000002000000000000000200000002000000000000000100000000000000
     m_Sprites:
     - {fileID: 21300022, guid: 901454e9bbbe69a4892605a6b001d5f3, type: 3}
@@ -110,7 +110,7 @@ MonoBehaviour:
     m_PerlinScale: 0.5
     m_AutoTransform: 0
     m_Output: 0
-    m_ColliderType: 0
+    m_ColliderType: 1
   - m_Neighbors: 0000000001000000010000000200000002000000020000000100000001000000
     m_Sprites:
     - {fileID: 21300024, guid: 901454e9bbbe69a4892605a6b001d5f3, type: 3}
@@ -118,7 +118,7 @@ MonoBehaviour:
     m_PerlinScale: 0.5
     m_AutoTransform: 0
     m_Output: 0
-    m_ColliderType: 0
+    m_ColliderType: 1
   - m_Neighbors: 0100000001000000000000000200000002000000010000000100000002000000
     m_Sprites:
     - {fileID: 21300026, guid: 901454e9bbbe69a4892605a6b001d5f3, type: 3}
@@ -126,7 +126,7 @@ MonoBehaviour:
     m_PerlinScale: 0.5
     m_AutoTransform: 0
     m_Output: 0
-    m_ColliderType: 0
+    m_ColliderType: 1
   - m_Neighbors: 0200000001000000010000000100000001000000020000000100000002000000
     m_Sprites:
     - {fileID: 21300028, guid: 901454e9bbbe69a4892605a6b001d5f3, type: 3}
@@ -134,7 +134,7 @@ MonoBehaviour:
     m_PerlinScale: 0.5
     m_AutoTransform: 0
     m_Output: 0
-    m_ColliderType: 0
+    m_ColliderType: 1
   - m_Neighbors: 0000000001000000010000000200000001000000000000000200000000000000
     m_Sprites:
     - {fileID: 21300030, guid: 901454e9bbbe69a4892605a6b001d5f3, type: 3}
@@ -142,7 +142,7 @@ MonoBehaviour:
     m_PerlinScale: 0.5
     m_AutoTransform: 0
     m_Output: 0
-    m_ColliderType: 0
+    m_ColliderType: 1
   - m_Neighbors: 0100000001000000010000000100000001000000000000000200000000000000
     m_Sprites:
     - {fileID: 21300032, guid: 901454e9bbbe69a4892605a6b001d5f3, type: 3}
@@ -150,7 +150,7 @@ MonoBehaviour:
     m_PerlinScale: 0.5
     m_AutoTransform: 0
     m_Output: 0
-    m_ColliderType: 0
+    m_ColliderType: 1
   - m_Neighbors: 0100000001000000000000000100000002000000000000000200000000000000
     m_Sprites:
     - {fileID: 21300034, guid: 901454e9bbbe69a4892605a6b001d5f3, type: 3}
@@ -158,7 +158,7 @@ MonoBehaviour:
     m_PerlinScale: 0.5
     m_AutoTransform: 0
     m_Output: 0
-    m_ColliderType: 0
+    m_ColliderType: 1
   - m_Neighbors: 0000000001000000000000000200000002000000000000000100000000000000
     m_Sprites:
     - {fileID: 21300036, guid: 901454e9bbbe69a4892605a6b001d5f3, type: 3}
@@ -166,7 +166,7 @@ MonoBehaviour:
     m_PerlinScale: 0.5
     m_AutoTransform: 0
     m_Output: 0
-    m_ColliderType: 0
+    m_ColliderType: 1
   - m_Neighbors: 0000000001000000000000000200000001000000000000000200000000000000
     m_Sprites:
     - {fileID: 21300038, guid: 901454e9bbbe69a4892605a6b001d5f3, type: 3}
@@ -174,7 +174,7 @@ MonoBehaviour:
     m_PerlinScale: 0.5
     m_AutoTransform: 0
     m_Output: 0
-    m_ColliderType: 0
+    m_ColliderType: 1
   - m_Neighbors: 0100000002000000010000000100000001000000000000000200000000000000
     m_Sprites:
     - {fileID: 21300040, guid: 901454e9bbbe69a4892605a6b001d5f3, type: 3}
@@ -182,7 +182,7 @@ MonoBehaviour:
     m_PerlinScale: 0.5
     m_AutoTransform: 0
     m_Output: 0
-    m_ColliderType: 0
+    m_ColliderType: 1
   - m_Neighbors: 0200000001000000000000000100000002000000000000000200000000000000
     m_Sprites:
     - {fileID: 21300042, guid: 901454e9bbbe69a4892605a6b001d5f3, type: 3}
@@ -190,7 +190,7 @@ MonoBehaviour:
     m_PerlinScale: 0.5
     m_AutoTransform: 0
     m_Output: 0
-    m_ColliderType: 0
+    m_ColliderType: 1
   - m_Neighbors: 0200000001000000020000000100000001000000020000000100000001000000
     m_Sprites:
     - {fileID: 21300044, guid: 901454e9bbbe69a4892605a6b001d5f3, type: 3}
@@ -198,7 +198,7 @@ MonoBehaviour:
     m_PerlinScale: 0.5
     m_AutoTransform: 0
     m_Output: 0
-    m_ColliderType: 0
+    m_ColliderType: 1
   - m_Neighbors: 0000000002000000000000000200000001000000000000000200000000000000
     m_Sprites:
     - {fileID: 21300046, guid: 901454e9bbbe69a4892605a6b001d5f3, type: 3}
@@ -206,7 +206,7 @@ MonoBehaviour:
     m_PerlinScale: 0.5
     m_AutoTransform: 0
     m_Output: 0
-    m_ColliderType: 0
+    m_ColliderType: 1
   - m_Neighbors: 0000000002000000000000000100000001000000000000000200000000000000
     m_Sprites:
     - {fileID: 21300048, guid: 901454e9bbbe69a4892605a6b001d5f3, type: 3}
@@ -214,7 +214,7 @@ MonoBehaviour:
     m_PerlinScale: 0.5
     m_AutoTransform: 0
     m_Output: 0
-    m_ColliderType: 0
+    m_ColliderType: 1
   - m_Neighbors: 0000000002000000000000000100000002000000000000000200000000000000
     m_Sprites:
     - {fileID: 21300050, guid: 901454e9bbbe69a4892605a6b001d5f3, type: 3}
@@ -222,7 +222,7 @@ MonoBehaviour:
     m_PerlinScale: 0.5
     m_AutoTransform: 0
     m_Output: 0
-    m_ColliderType: 0
+    m_ColliderType: 1
   - m_Neighbors: 0000000001000000000000000200000002000000000000000200000000000000
     m_Sprites:
     - {fileID: 21300052, guid: 901454e9bbbe69a4892605a6b001d5f3, type: 3}
@@ -230,7 +230,7 @@ MonoBehaviour:
     m_PerlinScale: 0.5
     m_AutoTransform: 0
     m_Output: 0
-    m_ColliderType: 0
+    m_ColliderType: 1
   - m_Neighbors: 0000000002000000010000000200000001000000000000000200000000000000
     m_Sprites:
     - {fileID: 21300054, guid: 901454e9bbbe69a4892605a6b001d5f3, type: 3}
@@ -238,7 +238,7 @@ MonoBehaviour:
     m_PerlinScale: 0.5
     m_AutoTransform: 0
     m_Output: 0
-    m_ColliderType: 0
+    m_ColliderType: 1
   - m_Neighbors: 0100000002000000000000000100000002000000000000000200000000000000
     m_Sprites:
     - {fileID: 21300056, guid: 901454e9bbbe69a4892605a6b001d5f3, type: 3}
@@ -246,7 +246,7 @@ MonoBehaviour:
     m_PerlinScale: 0.5
     m_AutoTransform: 0
     m_Output: 0
-    m_ColliderType: 0
+    m_ColliderType: 1
   - m_Neighbors: 0200000001000000020000000100000001000000010000000100000002000000
     m_Sprites:
     - {fileID: 21300058, guid: 901454e9bbbe69a4892605a6b001d5f3, type: 3}
@@ -254,7 +254,7 @@ MonoBehaviour:
     m_PerlinScale: 0.5
     m_AutoTransform: 0
     m_Output: 0
-    m_ColliderType: 0
+    m_ColliderType: 1
   - m_Neighbors: 0200000001000000020000000100000001000000020000000100000002000000
     m_Sprites:
     - {fileID: 21300060, guid: 901454e9bbbe69a4892605a6b001d5f3, type: 3}
@@ -262,7 +262,7 @@ MonoBehaviour:
     m_PerlinScale: 0.5
     m_AutoTransform: 0
     m_Output: 0
-    m_ColliderType: 0
+    m_ColliderType: 1
   - m_Neighbors: 0100000001000000010000000100000001000000020000000100000002000000
     m_Sprites:
     - {fileID: 21300062, guid: 901454e9bbbe69a4892605a6b001d5f3, type: 3}
@@ -270,7 +270,7 @@ MonoBehaviour:
     m_PerlinScale: 0.5
     m_AutoTransform: 0
     m_Output: 0
-    m_ColliderType: 0
+    m_ColliderType: 1
   - m_Neighbors: 0200000001000000010000000100000001000000020000000100000001000000
     m_Sprites:
     - {fileID: 21300064, guid: 901454e9bbbe69a4892605a6b001d5f3, type: 3}
@@ -278,7 +278,7 @@ MonoBehaviour:
     m_PerlinScale: 0.5
     m_AutoTransform: 0
     m_Output: 0
-    m_ColliderType: 0
+    m_ColliderType: 1
   - m_Neighbors: 0200000001000000020000000100000001000000010000000100000001000000
     m_Sprites:
     - {fileID: 21300066, guid: 901454e9bbbe69a4892605a6b001d5f3, type: 3}
@@ -286,7 +286,7 @@ MonoBehaviour:
     m_PerlinScale: 0.5
     m_AutoTransform: 0
     m_Output: 0
-    m_ColliderType: 0
+    m_ColliderType: 1
   - m_Neighbors: 0100000001000000020000000100000001000000010000000100000002000000
     m_Sprites:
     - {fileID: 21300068, guid: 901454e9bbbe69a4892605a6b001d5f3, type: 3}
@@ -294,7 +294,7 @@ MonoBehaviour:
     m_PerlinScale: 0.5
     m_AutoTransform: 0
     m_Output: 0
-    m_ColliderType: 0
+    m_ColliderType: 1
   - m_Neighbors: 0000000001000000000000000200000001000000000000000100000000000000
     m_Sprites:
     - {fileID: 21300070, guid: 901454e9bbbe69a4892605a6b001d5f3, type: 3}
@@ -302,7 +302,7 @@ MonoBehaviour:
     m_PerlinScale: 0.5
     m_AutoTransform: 0
     m_Output: 0
-    m_ColliderType: 0
+    m_ColliderType: 1
   - m_Neighbors: 0000000001000000000000000100000002000000000000000100000000000000
     m_Sprites:
     - {fileID: 21300072, guid: 901454e9bbbe69a4892605a6b001d5f3, type: 3}
@@ -310,7 +310,7 @@ MonoBehaviour:
     m_PerlinScale: 0.5
     m_AutoTransform: 0
     m_Output: 0
-    m_ColliderType: 0
+    m_ColliderType: 1
   - m_Neighbors: 0000000002000000000000000100000001000000000000000100000000000000
     m_Sprites:
     - {fileID: 21300074, guid: 901454e9bbbe69a4892605a6b001d5f3, type: 3}
@@ -318,7 +318,7 @@ MonoBehaviour:
     m_PerlinScale: 0.5
     m_AutoTransform: 0
     m_Output: 0
-    m_ColliderType: 0
+    m_ColliderType: 1
   - m_Neighbors: 0000000001000000000000000100000001000000000000000200000000000000
     m_Sprites:
     - {fileID: 21300076, guid: 901454e9bbbe69a4892605a6b001d5f3, type: 3}
@@ -326,4 +326,4 @@ MonoBehaviour:
     m_PerlinScale: 0.5
     m_AutoTransform: 0
     m_Output: 0
-    m_ColliderType: 0
+    m_ColliderType: 1
