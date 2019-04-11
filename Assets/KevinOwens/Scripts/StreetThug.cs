@@ -44,7 +44,6 @@ public class StreetThug : MonoBehaviour
             var canSeePlayer = distanceFromPlayer <= SightRange;
 
             if (canSeePlayer) {
-                Debug.Log("I can see the player.  Distance is " + distanceFromPlayer);
                 if (distanceFromPlayer > desiredMaximumDistanceFromPlayer) {  
                     FaceTowardsTarget();
 
