@@ -18,6 +18,7 @@ public class StreetThug : MonoBehaviour
 	private float punchCoolDownTimeStamp;
     private bool isFacingRight = true;
     private SpriteRenderer SpriteRenderer;
+    private float SightRange = 2.0f;
 
     private float groundDetectionDistance = 1f;
 
@@ -38,28 +39,33 @@ public class StreetThug : MonoBehaviour
             SpriteRenderer.sortingOrder = 0;            
         }
 
-        if (Target != null) {            
-            var distanceFromPlayer = Target.transform.position.x - transform.position.x;
-            if (Mathf.Abs(distanceFromPlayer) > desiredMaximumDistanceFromPlayer) {  
-                FaceTowardsTarget();
+        if (Target != null) {
+            var distanceFromPlayer = Mathf.Abs(Target.transform.position.x - transform.position.x);
+            var canSeePlayer = distanceFromPlayer <= SightRange;
 
-                var groundRaycastHit = Physics2D.Raycast(GroundDetection.position, Vector2.down, groundDetectionDistance);
-                if (groundRaycastHit.collider == false || groundRaycastHit.collider.tag != "Platform") {
-                    // We can't move there, it's a vacuum
+            if (canSeePlayer) {
+                Debug.Log("I can see the player.  Distance is " + distanceFromPlayer);
+                if (distanceFromPlayer > desiredMaximumDistanceFromPlayer) {  
+                    FaceTowardsTarget();
+
+                    var groundRaycastHit = Physics2D.Raycast(GroundDetection.position, Vector2.down, groundDetectionDistance);
+                    if (groundRaycastHit.collider == false || groundRaycastHit.collider.tag != "Platform") {
+                        // We can't move there, it's a vacuum
+                    }
+                    else {     
+                        float step = runningSpeed * Time.deltaTime;
+                        var targetPosition = Target.position;
+                        targetPosition.y = transform.position.y;
+                        transform.position = Vector2.MoveTowards(transform.position, targetPosition, step);
+                        _animator.SetBool("IsWalking", true);
+                    }
                 }
-                else {     
-                    float step = runningSpeed * Time.deltaTime;
-                    var targetPosition = Target.position;
-                    targetPosition.y = transform.position.y;
-                    transform.position = Vector2.MoveTowards(transform.position, targetPosition, step);
-                    _animator.SetBool("IsWalking", true);
-                }
-            }
-            else {
-                FaceTowardsTarget();
-                _animator.SetBool("IsWalking", false);
-                if (Mathf.Abs(distanceFromPlayer) <= MinimumPunchingDistance) {
-                    PunchTarget();
+                else {
+                    FaceTowardsTarget();
+                    _animator.SetBool("IsWalking", false);
+                    if (distanceFromPlayer <= MinimumPunchingDistance) {
+                        PunchTarget();
+                    }
                 }
             }
         }
